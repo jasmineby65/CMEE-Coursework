@@ -1,9 +1,9 @@
 #!/bin/bash 
-pdflatex $1.tex
-bibtex $1
-pdflatex $1.tex
-pdflatex $1.tex
-evince $1.pdf &
+pdflatex $1
+bibtex $(basename "$1" .tex)
+pdflatex $1
+pdflatex $1
+evince $(basename "$1" .tex).pdf
 
 ##Removing files made during conversion
 rm *.aux
