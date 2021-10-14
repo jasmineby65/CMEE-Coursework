@@ -14,5 +14,5 @@ length=$(tail -n +2 ../data/E.coli.fasta | tr -d '\n'| wc -m); echo "The sequenc
 (tail -n +2 ../data/E.coli.fasta | tr -d '\n') > ../data/E.coli.txt; ATGC=$(grep -o ATGC ../data/E.coli.txt | wc -l); echo "'ATGC' occurs" $ATGC "times in the E.coli genome"  
 
 ## 5. Computing the AT/GC ratio i.e. (A+T)/(G+C) of E.coli genome
-AT=$(grep -o 'A\|T' ../data/E.coli.txt | wc -l); GC=$(grep -o 'C\|G' ../data/E.coli.txt | wc -l); ratio=$(bc <<< "scale=5 ; $AT / $GC"); echo "The AT/GC ratio of E.coli genome is" $ratio
+AT=$(grep -o 'A\|T' ../data/E.coli.txt | wc -l); GC=$(grep -o 'C\|G' ../data/E.coli.txt | wc -l); ratio=$(bc <<< "scale=5; $AT / $GC"); echo "The AT/GC ratio of E.coli genome is" $ratio
 
