@@ -1,2 +1,2 @@
-My CMEE Coursework Repository
-Do I like this better
+### My CMEECoursework Repository  
+- Detailed explanation of folder contents can be found in each folder.

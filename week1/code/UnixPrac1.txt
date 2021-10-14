@@ -1,0 +1,18 @@
+## 1. Counting the number of lines in each file
+wc -l ../data/E.coli.fasta ../data/407228326.fasta ../data/407228412.fasta 
+
+
+## 2. Print all lines of E.coli genome except the first line 
+tail -n +2 ../data/E.coli.fasta
+
+
+## 3. Count the sequence length of E.coli genome
+length=$(tail -n +2 ../data/E.coli.fasta | tr -d '\n'| wc -m); echo "The sequence length of E.coli genome is" $length 
+
+
+## 4. Count the number of matches of particular sequence "ATGC" in the E.coli genome
+(tail -n +2 ../data/E.coli.fasta | tr -d '\n') > ../data/E.coli.txt; ATGC=$(grep -o ATGC ../data/E.coli.txt | wc -l); echo "'ATGC' occurs" $ATGC "times in the E.coli genome"  
+
+## 5. Computing the AT/GC ratio i.e. (A+T)/(G+C) of E.coli genome
+AT=$(grep -o 'A\|T' ../data/E.coli.txt | wc -l); GC=$(grep -o 'C\|G' ../data/E.coli.txt | wc -l); ratio=$(bc <<< "scale=5 ; $AT / $GC"); echo "The AT/GC ratio of E.coli genome is" $ratio
+

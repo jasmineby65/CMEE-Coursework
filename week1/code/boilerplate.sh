@@ -1,4 +1,5 @@
 #!/bin/bash
+
 #Author: Jasmine Yang zy1921@ic.ac.uk
 #Script: boilerplate.sh
 #Desc: simple boilerplate for shell scripts
