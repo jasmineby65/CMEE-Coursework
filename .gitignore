@@ -4,3 +4,4 @@
 *.log
 *.pdf
 *.png
+__pycache__/ #This is automatically made when a program is imported in python 
