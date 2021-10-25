@@ -2,7 +2,7 @@
 
 """ Examples of use of conditionals """
 
-__author__= "Kind of by me (credits to Google and Frances and everyone else"
+__author__= "Kind of by me (credits to Google and Frances and everyone else)"
 __version__ = '0.0.1'
 
 import sys 

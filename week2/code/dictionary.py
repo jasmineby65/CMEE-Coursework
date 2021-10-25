@@ -32,6 +32,7 @@ for i in taxa:
                 # if not enclosed by [] to set it as list,
                 # it will make a list of individual letters of the word
 
-taxa_dic
+print(taxa_dic) 
+# Need to add print or return to display the variable when running the script 
 
 

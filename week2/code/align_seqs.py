@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-""" Takes DNA sequences from csv file 
+""" Takes two DNA sequences from a csv file 
 and saves the best alignment and the corresponding score 
 in a single text file """
 
@@ -15,7 +15,7 @@ import sys
 
 ## A function that import two sequences from csv.file 
 def import_sequence(x):
-    """Importing DNA sequences from csv file"""
+    """Import DNA sequences from a csv file and extract the sequnce and sequnce length"""
     sequence = {}
     with open(x,'r') as r:
         lines = r.readlines()
@@ -42,6 +42,7 @@ def import_sequence(x):
 ## A function that computes a score by returning the number of matches starting 
 # from arbitrary startpoint (chosen by user)
 def calculate_score(s1, s2, l1, l2, startpoint):
+    """computes a score by returning the number of matches starting from arbitrary startpoint (chosen by user)"""
     matched = "" # to hold string displaying alignements
     score = 0
     for i in range(l2):
@@ -60,6 +61,7 @@ def calculate_score(s1, s2, l1, l2, startpoint):
 
 ## A function that finds the best match (highest score) for the two sequences
 def best_alignment(x):
+    """ finds the best alighment for two sequnces imported from a csv file"""
     my_best_align = None
     my_best_score = -1
     my_best_alignment = ""
@@ -88,6 +90,7 @@ def best_alignment(x):
 
 
 def main(argv): 
+    """Makes sure the "main" function is called from command line"""  
     best_alignment("../data/sequence.csv")
     return 0 
 

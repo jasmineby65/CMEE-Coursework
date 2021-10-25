@@ -1,10 +1,11 @@
-## Finds oak trees from a list of species 
+""" Function that finds oak trees from a list of species """
 
 taxa = ['Quercus robur', \
 'Fraxinus excelsior', \
 'Pinus sylvestris', 'Quercus cerris', ]
 
 def is_an_oak(name):
+    """ checks if an species is a oak """
     return name.lower().startswith('quercus ')
 
 ## Using for loops

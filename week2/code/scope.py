@@ -1,9 +1,12 @@
+"""Examples of how global variable work"""
+
 _a_global = 10 # a global variable i.e. outside a function
 
 if _a_global >= 5:
     _b_global = _a_global + 5 # also a global variable 
 
 def a_function():
+    """ Function that modify a global variable within the function """
     _a_global = 5 # a local variable i.e. inside a function (a_function)
     # if the a local variable of the same name is made inside a function, 
     # it will overwrite the global variable
@@ -35,6 +38,7 @@ _a_global=10
 print('Outside the function, the value of _a_global is ', _a_global)
 
 def a_function():
+    """Function that sets local variable _a_global as global variable """
     global _a_global # this command allows local variable to be made available outside
     # i.e. convert it to a global variable 
     _a_global = 5
@@ -56,6 +60,7 @@ def a_function():
     _a_global = 10
 
     def _a_function2():
+        """A nested function that sets local variable _a_global as global variable """
         global _a_global 
         _a_global = 20 # this changes the value of _a_global to 20 outside 
         # but NOT inside the function!

@@ -15,7 +15,7 @@ __license__ = "License for this code/program"
 ## importing module
 import sys #SYStem-specific parameters and functions
 # allows access to interact with the interpreter i.e. operating system
-sys.exit("I am exisiting right now!")
+# sys.exit("I am exisiting right now!")
 
 
 ## constants
