@@ -1,4 +1,5 @@
 def buggyfunc(x):
+    """Calculate x/x-1 for range(x)"""
     y = x
     for i in range(x):
         try:

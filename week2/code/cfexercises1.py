@@ -7,18 +7,18 @@ __version__ = '0.0.1'
 
 import sys 
 
-## calculate square root of x
 def foo_1(x):
+    """calculate square root of x"""
     return x ** 0.5
 
-## print the larger value input
 def foo_2(x,y):
+    """print the larger value input"""
     if x>y:
         return x
     return y
 
-## sorting the number from small to large
 def foo_3(x,y,z):
+    """sorting the number from small to large"""
     if x>y:
         tmp=y
         y=x
@@ -33,21 +33,22 @@ def foo_3(x,y,z):
         x=tmp
     return[x,y,z]
 
-## factorial of x
+
 def foo_4(x):
+    """factorial of x"""
     result = 1
     for i in range(1, x+1):
         result = result * i
     return result
 
-# a recursive function that calculates the factorial of x
 def foo_5(x): 
+    """a recursive function that calculates the factorial of x"""
     if x==1:
         return 1
     return x*foo_5(x-1)
 
-# calculate the factorial of x in a differnt way
 def foo_6(x): 
+    """calculate the factorial of x in a differnt way"""
     facto =1
     while x >= 1:
         facto = facto * x
@@ -55,7 +56,7 @@ def foo_6(x):
     return facto 
     
 def main(argv): 
-    #running all the functions with specified input
+    """running all the functions with specified input"""
     print(foo_1(9))
     print(foo_2(5,10))
     print(foo_3(1,2,3))

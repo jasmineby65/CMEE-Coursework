@@ -88,7 +88,6 @@ def best_alignment(x):
         return 
 
 
-
 def main(argv): 
     """Makes sure the "main" function is called from command line"""  
     best_alignment("../data/sequence.csv")

@@ -57,7 +57,8 @@ def find_all_primes(x=22):
     print("There are %d primes bewteen 2 and %d" % (len(allprimes), x))
     return allprimes 
 
-def main(argv): #running all the functions with specified input 
+def main(argv): 
+    """running all the functions with specified input""" 
     even_or_odd(22)
     even_or_odd(33)
     largest_divisor_five(120)

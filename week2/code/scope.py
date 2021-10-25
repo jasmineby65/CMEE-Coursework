@@ -57,6 +57,7 @@ print('Outside the function, the value of _a_global now is ', _a_global)
 print('When the global function is used inside nested functions...')
 
 def a_function():
+    """Function that contains a nested function"""
     _a_global = 10
 
     def _a_function2():
@@ -84,6 +85,7 @@ print('In comparison...')
 _a_global = 10
 
 def a_function():
+    """Function without local variable that contains a nested function"""
 
     def _a_function2():
         global _a_global # at this point, _a_global is already a global variable 

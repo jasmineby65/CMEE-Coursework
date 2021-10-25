@@ -33,7 +33,8 @@ def even_or_odd(x=0):
     return 
 
 
-def main(argv): #running all the functions with specified input 
+def main(argv): 
+    """running all the functions with specified input""" 
     even_or_odd(22)
     even_or_odd(33)
     return 0 
