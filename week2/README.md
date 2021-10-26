@@ -38,7 +38,7 @@ Produce a csv file named "bodymass.csv" that contains data of species names and 
 Language: python3
 
 ### Usage
-```
+```python
 %run basic_csv.py
 ```
 
@@ -49,7 +49,7 @@ Print the content of "test.txt" twice, once as it is and once with empty lines r
 Language: python3
 
 ### Usage
-``` 
+```python
 %run basic_io1.py
 ```
 
@@ -60,7 +60,7 @@ Produce a text file named "testout.txt" that contains the number 0 to 99, each w
 Language: python3
 
 ### Usage
-```
+```python
 %run basic_io2.py
 ```
 
@@ -71,7 +71,7 @@ Print and save a file named "test.p" that contains the dictionary:
 {'a key': 10, 'another key':11} 
 
 ### Usage
-```
+```python
 %run basic_io3.py
 ```
 
@@ -132,7 +132,7 @@ Print many "hello"
 Language: python3
 
 ### Usage
-``` 
+```python
 %run cfexercises2.py
 ```
 
@@ -176,7 +176,7 @@ find_all_primes(x)
 Example of debugging using the control flow tools: "try" and "except" 
 
 ### Usage 
-```
+```python
 %run debugme.py
 ```
 
@@ -187,7 +187,7 @@ Produce a dictionary called "taxa_dic", which maps order names to sets of taxa d
 Language: python3
 
 ### Usage
-``` 
+```python
 %run dictionary.py
 ```
 
@@ -209,7 +209,7 @@ Print a list of month,rainfall tuples where the amount of rain was greater than 
 Language: python3
 
 ### Usage
-```
+```python
 %run lc2.py
 ```
 
@@ -220,7 +220,7 @@ Examples of "for loop" use in Python
 Language: python3
 
 ### Usage
-```
+```python
 %run loops.py
 ```
 
@@ -249,7 +249,7 @@ Examples of how global and local variables work
 Language: python3
 
 ### Usage
-```
+```python
 %run scope.py
 ```
 
@@ -260,7 +260,7 @@ Print the name of the script, number of arguments, and the arguments.
 Language: python3
 
 ### Usage
-```
+```python
 %run sysargv.py
 ```
 
@@ -271,7 +271,7 @@ Test whether the function "even_or_odd(x)" works using doctest
 Language: python3 (Does NOT work from bash terminal)
 
 ### Usage
-```
+```python
 %run test_control_flow.py -v
 ```
 
@@ -293,7 +293,7 @@ Print the name of module ("__main__" in this script)
 Language: python3
 
 ### Usage
-```
+```python
 %run using_name.py
 ```
 
