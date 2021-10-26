@@ -198,7 +198,7 @@ Print three lists containing the latin names, common names and mean body masses 
 Language: python3
 
 ### Usage
-```
+```python
 %run lc1.py
 ```
 
