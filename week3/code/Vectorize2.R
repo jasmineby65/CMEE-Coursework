@@ -21,12 +21,11 @@ stochrick <- function(p0 = runif(1000, .5, 1.5), r = 1.2, K = 1, sigma = 0.2,num
      }
   
   }
- #write.csv(N, file="../results/no_vectorisation.csv", row.names=FALSE, col.names=FALSE)
  return(N)
 
 }
 
-stochrick()
+#stochrick()
 
 # Now write another function called stochrickvect that vectorizes the above to
 # the extent possible, with improved performance: 
@@ -56,7 +55,7 @@ stochrickvect <- function(p0 = runif(1000, .5, 1.5), r = 1.2, K = 1, sigma = 0.2
   return(N1)
 }
 
-stochrickvect()
+#stochrickvect()
 
 print("Non-vectorized Stochastic Ricker takes:")
 print(system.time(res2<-stochrick()))

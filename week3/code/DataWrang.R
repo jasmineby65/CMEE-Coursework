@@ -1,6 +1,6 @@
-################################################################
-################## Wrangling the Pound Hill Dataset ############
-################################################################
+####################################################################
+################## Wrangling the Pound Hill Dataset ################
+####################################################################
 
 ############# Load the dataset ###############
 MyData <- as.matrix(read.csv("../data/PoundHillData.csv", header = FALSE, stringsAsFactors=F))
@@ -36,6 +36,9 @@ TempData <- as.data.frame(MyData[-1,],stringsAsFactors = F)
 # normal data point rather than headers
 head(TempData)
 colnames(TempData) <- MyData[1,] # assign column names from original data
+head(TempData)
+
+rownames(TempData) <- NULL # getting rid of the column with V2, V3... (old column header)
 head(TempData)
 
 ############# Convert from wide to long format  ###############
