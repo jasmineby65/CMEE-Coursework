@@ -2,6 +2,8 @@
 ################## Wrangling the Pound Hill Dataset ################
 ####################################################################
 
+rm(list=(ls()))
+
 ############# Load the dataset ###############
 MyData <- as.matrix(read.csv("../data/PoundHillData.csv", header = FALSE, stringsAsFactors=F))
 # header = false because the raw data don't have real headers
@@ -26,6 +28,7 @@ fix(MyData)
 
 ############# Replace species absences with zeros ###############
 MyData[MyData == ""] = 0
+head(MyData)
 
 ############# Convert raw matrix to data frame ###############
 
@@ -68,3 +71,18 @@ head(MyWrangledData)
 dim(MyWrangledData) # now there is only 6 columns 
 
 ############# Exploring the data (extend the script below)  ###############
+require(tidyverse) 
+# There are some conflict with name so some function need to have the package name in front to be run 
+tidyverse_packages(include_self=T)
+
+MyWrangledData <- tibble::as_tibble(MyWrangledData)
+# convert data frame to a tbl object, which is a dataframe that gives you more error messages to help tackle problems earlier  
+MyWrangledData
+class(MyWrangledData)
+
+dplyr::glimpse(MyWrangledData) #str() equivalent 
+
+dplyr::filter(MyWrangledData, Count>100) #subset() equivalent
+
+dplyr::slice(MyWrangledData, 10:15) # shows specific rows of the data
+
