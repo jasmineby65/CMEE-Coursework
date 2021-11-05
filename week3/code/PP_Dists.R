@@ -9,6 +9,10 @@ head(MyDF)
 require(tidyverse)
 dplyr::glimpse(MyDF)
 
+## Converting mg to g for Prey.mass ##
+levels(MyDF$Prey.mass.unit)
+MyDF$Prey.mass[which(MyDF$Prey.mass.unit == "mg")] <- MyDF$Prey.mass[which(MyDF$Prey.mass.unit=="mg")]/1000
+
 ## Making subsets by feeding type ##
 levels(MyDF$Type.of.feeding.interaction)
 
@@ -130,38 +134,62 @@ dev.off()
 # mean and median log predator mass, prey mass, predator-prey size ratio by feeding type 
 # Headers: Category, Feeding type, Mean, Median 
 
-results <- matrix(NA, 15, 4)
-colnames(results) <- c("Category", "Feeding_type", "Log10(Mean)", "Log10(Median)")
+# Making wide dataset 
+results <- matrix(NA, 5, 7)
+colnames(results) <- c("Feeding_type", "Mean_log(Prey_mass)(g)", "Median_log(Prey_mass)(g)", 
+                       "Mean_log(Predator_mass)(g)", "Median_log(Predator_mass)(g)",
+                       "Mean_log(SizeRatio)", "Median_log(SizeRatio)")
 results
 
-name <- c("Prey_mass(g)", "Predator_mass(g)", "Size_ratio")
-results[,"Category"] <- rep(name, each=5) 
+results[,1]<- levels(MyDF$Type.of.feeding.interaction)
 results
 
-type <- levels(MyDF$Type.of.feeding.interaction)
-results[,"Feeding_type"]<- rep(type,3)
-results
+results[,2] <- tapply(log10(MyDF$Prey.mass),MyDF$Type.of.feeding.interaction, mean)
+results[,3] <- tapply(log10(MyDF$Prey.mass),MyDF$Type.of.feeding.interaction, median)
 
-preymean <- tapply(log10(MyDF$Prey.mass),MyDF$Type.of.feeding.interaction, mean)
-preymedian <- tapply(log10(MyDF$Prey.mass),MyDF$Type.of.feeding.interaction, median)
+results[,4] <- tapply(log10(MyDF$Predator.mass),MyDF$Type.of.feeding.interaction, mean)
+results[,5] <- tapply(log10(MyDF$Predator.mass),MyDF$Type.of.feeding.interaction, median)
 
-predmean <- tapply(log10(MyDF$Predator.mass),MyDF$Type.of.feeding.interaction, mean)
-predmedian <- tapply(log10(MyDF$Predator.mass),MyDF$Type.of.feeding.interaction, median)
-
-sizemean <- tapply(log10(MyDF$Prey.mass/MyDF$Predator.mass),MyDF$Type.of.feeding.interaction, mean)
-sizemedian <- tapply(log10(MyDF$Prey.mass/MyDF$Predator.mass),MyDF$Type.of.feeding.interaction, median)
-
-results[1:5,"Log10(Mean)"] <- preymean 
-results[1:5,"Log10(Median)"] <- preymedian
-
-results[6:10,"Log10(Mean)"] <- predmean 
-results[6:10,"Log10(Median)"] <- predmedian
-
-results[11:15,"Log10(Mean)"] <- sizemean 
-results[11:15,"Log10(Median)"] <- sizemedian
+results[,6] <- tapply(log10(MyDF$Prey.mass/MyDF$Predator.mass),MyDF$Type.of.feeding.interaction, mean)
+results[,7] <- tapply(log10(MyDF$Prey.mass/MyDF$Predator.mass),MyDF$Type.of.feeding.interaction, median)
 
 results
 write.csv(results, "../results/PP_Results.csv", row.names=F)
+
+
+# Making vertical csv 
+#results <- matrix(NA, 15, 4)
+#colnames(results) <- c("Category", "Feeding_type", "Log10(Mean)", "Log10(Median)")
+#results
+
+#name <- c("Prey_mass(g)", "Predator_mass(g)", "Size_ratio")
+#results[,"Category"] <- rep(name, each=5) 
+#results
+
+#type <- levels(MyDF$Type.of.feeding.interaction)
+#results[,"Feeding_type"]<- rep(type,3)
+#results
+
+#preymean <- tapply(log10(MyDF$Prey.mass),MyDF$Type.of.feeding.interaction, mean)
+#preymedian <- tapply(log10(MyDF$Prey.mass),MyDF$Type.of.feeding.interaction, median)
+
+#predmean <- tapply(log10(MyDF$Predator.mass),MyDF$Type.of.feeding.interaction, mean)
+#predmedian <- tapply(log10(MyDF$Predator.mass),MyDF$Type.of.feeding.interaction, median)
+
+#sizemean <- tapply(log10(MyDF$Prey.mass/MyDF$Predator.mass),MyDF$Type.of.feeding.interaction, mean)
+#sizemedian <- tapply(log10(MyDF$Prey.mass/MyDF$Predator.mass),MyDF$Type.of.feeding.interaction, median)
+
+#results[1:5,"Log10(Mean)"] <- preymean 
+#results[1:5,"Log10(Median)"] <- preymedian
+
+#results[6:10,"Log10(Mean)"] <- predmean 
+#results[6:10,"Log10(Median)"] <- predmedian
+
+#results[11:15,"Log10(Mean)"] <- sizemean 
+#results[11:15,"Log10(Median)"] <- sizemedian
+
+#results
+#write.csv(results, "../results/PP_Results.csv", row.names=F)
 
 
 
