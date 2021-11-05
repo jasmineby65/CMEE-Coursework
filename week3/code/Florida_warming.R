@@ -64,6 +64,10 @@ p_value
 # can also use mean() which use T=1, F=0 to calculate the mean value of all elements in vector
 # p_value <- mean(perm_stat[1:P] >= observed_cor)
 
+
+# 4. present the results and interpretation in a pdf documents 
+# include the source code of this pdf in the submission 
+
 ## Making plot ##
 require(ggplot2)
 plot <- as.data.frame(perm_stat)
@@ -72,9 +76,7 @@ p <- ggplot(plot, aes(x=perm_stat),  xlab="Permutated correlation coefficient") 
   geom_histogram() + geom_vline(aes(xintercept = observed_cor, col=I("red")))
 p
 
-jpeg("../results/Florida.jpeg")
+jpeg("../data/Florida.jpeg")
 p
 dev.off()
 
-# 4. present the results and interpretation in a pdf documents 
-# include the source code of this pdf in the submission 
