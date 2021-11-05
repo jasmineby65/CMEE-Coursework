@@ -11,7 +11,6 @@ dplyr::glimpse(MyDF)
 
 
 ### Making figure ###
-dev.off()
 p <- ggplot(MyDF, 
             aes(x=Prey.mass, 
                 y=Predator.mass,
@@ -66,6 +65,31 @@ rownames(results) <- c("slope", "intercept", "r-squared", "F-statistic", "p-valu
 colnames(results) <- levels(MyDF$Grouping)
 results
 
-ddply(.data=MyDF, .variables = Predator.lifestage, )
+# Making lm
+linear <- dlply(MyDF, .(Predator.lifestage, Type.of.feeding.interaction), function(x) lm(Predator.mass ~ Prey.mass, data=x))
+linear
+#summary(linear$adult.piscivorous)
+#str(summary(linear$adult.piscivorous))
+#summary(linear$adult.piscivorous)$coefficient[8]
 
-write.csv(results, "../results/PP_Regree_Results.csv")
+output <- ldply(linear, function(x){
+  intercept <- summary(x)$coefficient[1]
+  slope <- summary(x)$coefficient[2]
+  r <- summary(x)$r.squared
+  p <- summary(x)$coefficient[8]
+  data.frame("Intercept"=intercept, "Slope"=slope, "r_squared"=r, "p-value"=p)
+})
+output
+
+fstat <- ldply(linear, function(x){ 
+  f <- summary(x)$fstatistic[1]
+  data.frame("F-statistic"=f) 
+} )
+fstat
+
+final_out <- merge(output, fstat, by=c("Predator.lifestage", "Type.of.feeding.interaction"), all=T)
+rownames(final_out) <- NULL
+final_out
+
+write.csv(final_out, "../results/PP_Regress_Results.csv")
+
