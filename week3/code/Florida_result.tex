@@ -1,0 +1,44 @@
+\documentclass[12pt, a4paper]{article}
+
+\usepackage[top=0.05 cm, left=2 cm, right=2 cm, bottom=0cm]{geometry}
+\usepackage{graphicx}
+
+\title{Is Florida Warming?}
+
+\author{Jasmine Yang}
+
+\date{\today}
+
+\begin{document}
+  \thispagestyle{empty}  
+  \maketitle
+
+  
+  \section*{Introduction}
+  The annual temperature dataset from Key West in Florida, USA for the 20th century is analysed to examine   whether Florida is getting warmer.
+  
+  
+  \section*{Results}
+    Permutation analysis gave a p-value of 0, with none of the 	permutated correlation coefficients (number of permutation = 10,000) exceeding the original coefficient in value ($r = 0.533$).
+Therefore, the temperature change across the years in Florida is not random.
+A plot of the annual temperature across the years suggests a trend of increasing temperature over time. 
+
+  \begin{figure}[h]
+  \begin{center}
+    \includegraphics[scale=0.35]{../data/Florida1.pdf}    
+    \label{Fig1}
+    \caption{Distribution of the permutated correlation coefficients (n=10,000). The red line shows the observed correlation coefficient.}
+  \end{center}
+  \end{figure}
+  
+  
+  \begin{figure}[h]
+  \begin{center}
+  \includegraphics[scale=0.35]{../data/Florida2.pdf}
+    \label{Fig2}
+    \caption{Annual temperature change in Florida across the years. }  
+  \end{center}
+  \end{figure}
+
+
+\end{document}

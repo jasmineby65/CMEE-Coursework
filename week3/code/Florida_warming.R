@@ -68,15 +68,35 @@ p_value
 # 4. present the results and interpretation in a pdf documents 
 # include the source code of this pdf in the submission 
 
-## Making plot ##
+## Making histogram plot ##
+dev.off()
 require(ggplot2)
 plot <- as.data.frame(perm_stat)
 head(plot)
-p <- ggplot(plot, aes(x=perm_stat),  xlab="Permutated correlation coefficient") + 
-  geom_histogram() + geom_vline(aes(xintercept = observed_cor, col=I("red")))
+p <- ggplot(plot, aes(x=perm_stat)) + 
+  geom_histogram(bins = 50, fill="grey", colour="black") + 
+  geom_vline(aes(xintercept = observed_cor, col=I("red"))) +
+  geom_text(x=0.43, y=600, label ="Original", colour="red", size = 6) +  
+  xlab("Correlation coefficient") + 
+  theme_bw() + theme(aspect.ratio = 0.7)
 p
 
-jpeg("../data/Florida.jpeg")
+pdf("../data/Florida1.pdf", 10, 7)
 p
 dev.off()
+
+## Making scatter plot of original data ##
+dev.off()
+#str(ats)
+q <- ggplot(ats, aes(x=Year, y=Temp)) +
+  geom_point(shape=19, colour="orange") +
+  geom_smooth(method="lm", colour="red", fill="orange") +
+  ylab("Temperature") + xlab("Year") +
+  theme_bw() + theme(aspect.ratio = 0.7)
+q
+
+pdf("../data/Florida2.pdf", 10, 7)
+q
+dev.off()
+
 

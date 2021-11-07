@@ -49,28 +49,46 @@ dev.off()
 # i.e. make subset of data for feeding x predator life stage and calculate the regression of prey-predator mass for each subset
 # Headers: Slope (regression slope), Intercept (regression intercept), r_squared, F-statistic, p-value
 
-# Making headers of each combinations of lifestage and feeding type  
-levels(MyDF$Predator.lifestage)
-levels(MyDF$Type.of.feeding.interaction)
-MyDF$Grouping <- factor(paste0(MyDF$Predator.lifestage, "_", MyDF$Type.of.feeding.interaction))
-head(MyDF)
+
+## Making headers of each combinations of lifestage and feeding type##
+
+#levels(MyDF$Predator.lifestage)
+#levels(MyDF$Type.of.feeding.interaction)
+#MyDF$Grouping <- factor(paste0(MyDF$Predator.lifestage, "_", MyDF$Type.of.feeding.interaction))
+#head(MyDF)
 # paste() joins vectors and strings to make strings, paste0() concatenate vectors without spaces inbewteen
 # Exporting csv
-levels(MyDF$Grouping)
+#levels(MyDF$Grouping)
 
-# Making result matrix 
-results <- matrix(NA, 5, 18)
-results
-rownames(results) <- c("slope", "intercept", "r-squared", "F-statistic", "p-value")
-colnames(results) <- levels(MyDF$Grouping)
-results
+## This wasn't meeded because plyr has function that makes data frame from calculation result 
 
-# Making lm
-linear <- dlply(MyDF, .(Predator.lifestage, Type.of.feeding.interaction), function(x) lm(Predator.mass ~ Prey.mass, data=x))
+
+## Applying lm to all possible subsets ##
+linear <- dlply(MyDF, .(Predator.lifestage, Type.of.feeding.interaction), 
+                function(x) lm(Predator.mass ~ Prey.mass, data=x))
+# dlply applies a function to subsets of data (specified with .()) and combines the results in a list 
+class(linear)
 linear
-#summary(linear$adult.piscivorous)
-#str(summary(linear$adult.piscivorous))
-#summary(linear$adult.piscivorous)$coefficient[8]
+#str(linear)
+# Makes a list of 18 lists that contains results of lm of the different subsets 
+
+# ddply does the same thing but combines the results in a data frame instead
+# ddply will return an error in this case because lm result cannot be stored as data frame 
+
+ 
+## Making a dataframe from the output of lm ##
+summary(linear$adult.piscivorous)
+str(summary(linear$adult.piscivorous))
+
+# ldply() applies a function to each elements in a list and combines the results in a dataframe 
+output <- ldply(linear, function(x){
+  intercept <- summary(x)$coefficient[1]
+  slope <- summary(x)$coefficient[2]
+  r <- summary(x)$r.squared
+  p <- summary(x)$coefficient[8]
+  data.frame("Intercept"=intercept, "Slope"=slope, "r_squared"=r, "p-value"=p)
+})
+output
 
 output <- ldply(linear, function(x){
   intercept <- summary(x)$coefficient[1]
@@ -81,15 +99,24 @@ output <- ldply(linear, function(x){
 })
 output
 
+# f-statistics has two variables (a character and an integer) so cannot be assigned to one row 
+a <- summary(linear$adult.piscivorous)$fstatistic[1]
+a
+class(a)
+
+# need to assign it to a dataframe seperately 
 fstat <- ldply(linear, function(x){ 
   f <- summary(x)$fstatistic[1]
   data.frame("F-statistic"=f) 
 } )
 fstat
 
+# Combining the two dataframe
+# merge() allows two dataframe to be combined by common columns or row names specified with by=c()
+# all=T will include data point that are NA (otherwise it will say the dataframes have different length)
 final_out <- merge(output, fstat, by=c("Predator.lifestage", "Type.of.feeding.interaction"), all=T)
-rownames(final_out) <- NULL
 final_out
 
+# Export as csv
 write.csv(final_out, "../results/PP_Regress_Results.csv")
 
