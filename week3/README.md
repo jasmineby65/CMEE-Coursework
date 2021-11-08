@@ -23,7 +23,7 @@ source("DataWrangTidy.R")
 
 # Florida_warming.R
 Perform a permutation analysis on the annual temperature dataset from Key West in Florida to examine whether Florida is warming. 
-Produces two PDF images (Florida1.pdf, Florida2.pdf). Results are summarised in Florida_result.tex ( $$\LaTeX$$ ).
+Produces two PDF images (Florida1.pdf, Florida2.pdf). Results are summarised in Florida_result.tex (LaTeX).  
 Language: R
 
 ### Usage
