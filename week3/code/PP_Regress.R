@@ -5,7 +5,7 @@ require(plyr)
 
 # Loading data
 MyDF <- read.csv("../data/EcolArchives-E089-51-D1.csv")
-#MyDF$Prey.mass[which(MyDF$Prey.mass.unit == "mg")] <- MyDF$Prey.mass[which(MyDF$Prey.mass.unit=="mg")]/1000
+MyDF$Prey.mass[which(MyDF$Prey.mass.unit == "mg")] <- MyDF$Prey.mass[which(MyDF$Prey.mass.unit=="mg")]/1000
 head(MyDF)
 dplyr::glimpse(MyDF)
 
