@@ -11,3 +11,4 @@ __pycache__/
 .Rhistory
 results/*
 !results/.gitkeep
+.ipynb_checkpoints/
