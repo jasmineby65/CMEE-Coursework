@@ -1,3 +1,5 @@
+""" Produce a dictionary called "taxa_dic", which maps order names to sets of taxa derived from "taxa"  """
+
 taxa = [ ('Myotis lucifugus','Chiroptera'),
          ('Gerbillus henleyi','Rodentia',),
          ('Peromyscus crinitus', 'Rodentia'),

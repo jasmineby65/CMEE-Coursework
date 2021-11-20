@@ -1,3 +1,7 @@
+"""
+Produce a csv file named "bodymass.csv" that contains data of species names and body mass extracted from testcsv.csv  
+"""
+
 import csv
 
 # Read a file containing:

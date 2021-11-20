@@ -1,3 +1,5 @@
+""" Print many "hello" """
+
 #print 4 hello
 for j in range(12):
     if j % 3 == 0: ## % is 'module', which gives the remainders from dividing with 3

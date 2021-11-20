@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+"""Print the name of the script, number of arguments, and the arguments."""
+
 import sys
 print("This is the name of the script:", sys.argv[0])
 print("Number of argumetns:", len(sys.argv))

@@ -1,3 +1,5 @@
+"""Examples of "for loop" use in Python"""
+
 # FOR loops in Python
 for i in range(5):
     print(i)

@@ -1,16 +1,3 @@
-
-# MyExampleScript.py
-
-A function that calculates the power of x (x=2 tested)   
-Language: python3
-
-### Usage 
-```python
-%run MyExampleScript.py
-```
-
-&nbsp;
-
 # align_seqs.py
 
 Functions that import two DNA base sequnces from csv file and find best alignment   
@@ -226,6 +213,18 @@ Language: python3
 
 &nbsp;
 
+# MyExampleScript.py
+
+A function that calculates the power of x (x=2 tested)   
+Language: python3
+
+### Usage 
+```python
+%run MyExampleScript.py
+```
+
+&nbsp;
+
 # oaks.py
 A function that finds oak trees from a list of species  
 Language: python3 
@@ -278,7 +277,7 @@ Language: python3 (Does NOT work from bash terminal)
 &nbsp;
 
 # tuple.py
-Print the latin name, common name, and mass of each birds in blocks by species  
+Print the latin name, common name, and mass of each birds in blocks by species.     
 Language: python3
 
 ### Usage
@@ -296,4 +295,3 @@ Language: python3
 ```python
 %run using_name.py
 ```
-

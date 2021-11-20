@@ -2,6 +2,8 @@
 #FILE INPUT
 ##########################
 
+"""Print the content of "test.txt" twice, once as it is and once with empty lines removed"""
+
 # Open a file for reading ('r')
 with open('../sandbox/test.txt','r') as f:
 # use "implicit" for loop:

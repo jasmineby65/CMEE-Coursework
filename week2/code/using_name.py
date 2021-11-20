@@ -1,4 +1,9 @@
 #!/usr/bin/env python3
+
+"""
+Print the name of module ("__main__" in this script)  
+"""
+
 # Filename: using_name.py
 
 if __name__ == '__main__':

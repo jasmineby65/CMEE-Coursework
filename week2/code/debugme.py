@@ -1,3 +1,7 @@
+"""
+Example of debugging using the control flow tools: "try" and "except" 
+"""
+
 def buggyfunc(x):
     """Calculate x/x-1 for range(x)"""
     y = x
