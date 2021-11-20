@@ -9,6 +9,6 @@ __pycache__/
 #This is automatically made when a program is imported in python 
 .RData
 .Rhistory
-results/*
+results/
 !results/.gitkeep
 .ipynb_checkpoints/
