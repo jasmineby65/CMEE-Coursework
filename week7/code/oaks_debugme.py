@@ -1,9 +1,11 @@
+""" Runs through species name in a csv file and saves the oak species (Quercus) in a new csv (JustOaksData.csv) """
+
 import csv
 import sys
 
 #Define function
 def is_an_oak(name):
-    """ Returns True if name is starts with 'quercus' 
+    """ Returns True if name is starts with 'Quercus' 
     
     >>> is_an_oak("Quercus")
     True
@@ -23,6 +25,7 @@ def is_an_oak(name):
     return name == 'Quercus'
 
 def main(argv): 
+    """ Produce a csv file containing the name of oak species found in the input csv file """
     f = open('../data/TestOaksData.csv','r')
     g = open('../results/JustOaksData.csv','w')
     taxa = csv.reader(f)
