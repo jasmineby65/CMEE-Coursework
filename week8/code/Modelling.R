@@ -172,8 +172,7 @@ best_gompertz <- function(subset){
   
   Gompertz_models <- grid_search_gompertz(subset)
   Gompertz_models
-  
-  class(Gompertz_models[[1]])
+
   
   Gompertz_models$AIC <- lapply(Gompertz_models, AIC_calculation)
   Gompertz_models$AIC
@@ -182,7 +181,7 @@ best_gompertz <- function(subset){
     best_gomp = NA
     return(best_gomp)
   } else {  
-    best <- try(which.min(Gompertz_models$AIC), silent = T)
+    best <- which.min(Gompertz_models$AIC)
     best
     best_gomp <- Gompertz_models[[best]]
     best_gomp
