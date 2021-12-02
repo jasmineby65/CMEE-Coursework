@@ -13,3 +13,4 @@ results/
 !results/.gitkeep
 .ipynb_checkpoints/
 plots/
+!plots/.gitkeep
