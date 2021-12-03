@@ -6,13 +6,13 @@
 \setlength{\parskip}{0.15cm}
 \usepackage[round]{natbib}
 \usepackage{natbib}
-\bibliographystyle{stylename}
+\usepackage{csvsimple}
+\usepackage{pgfplotstable,filecontents}
+\pgfplotsset{compat=1.9}
+\usepackage{float}
 
-\bibliography{Mini_Project}
 
-
-
-\begin{document}
+\begin{document}\sloppy
 
 \begin{titlepage}
 \begin{center}
@@ -32,9 +32,13 @@
 \end{titlepage}
 
 \section{Abstract}
-
+Ecological models can be classified into two types; phenomenological models and mechanistic models. Phenomenological models describe the relationship between variables without consideration to the underlying biological causations while mechanistic models specify a known link between variables that explain the relationships. In this study, I compared the fit of different phenomenological models and mechanistic models across a range of microbial species to model their population growth curve. I found that mechanistic models, in particular Gompertz models, had the best fit across over 70\% of the dataset. However, mechanistic models were more likely to fail in producing a fit when the given dataset had a small number of data points. They also fitted poorly when the dataset deviated from the sigmoidal curve. Therefore, this study suggests that while the Gompertz model should produce a good fit in most datasets, it is not as robust as phenomenological models in fitting variable datasets. The fit of different models is highly context dependant and the model selection approach should be used to examine the best model to fit for a particular dataset. 
 
 \section{Introduction}
+Ecological studies aim to understand the underlying processes in nature by simplifying observed patterns and identify possible factors responsible for such patterns through modelling \cite{Johnson2004}. Model fitting is, therefore, a fundemental aspect of ecology \citep{Marquet2014}. Models can be classified in two categories: phenomenological and mechanistic. Phenomenological models fit mathematical functions to a data to describe the observed patterns without consideration for the underlying mechanism. Mechanistic models, on the other hand, uses specific links between parameters based on theorised relationship between the variables to predict a given data \cite{Jones2018}. In theory, mechanistic model does not estimate any parameters from the data, while phenomenological models are entirely data-based \citep{Lema-Perez2019}. The understanding of causation between variables means that mechanistic models allows for powerful prediction of values outside the current known set of data \cite{White2019}. In reality, most models contains both entirely estimated parameters from the data (phenomenological) and mechanistic parameters, making all models phenomenological \cite{White2019}. Thus, models tend to lie in a spectrum between phenomenological and mechanistic and can rarely be classified as purely one of the other \citep{Marquet2014}. In this study, I defined mechanistic models as any models that contain parameters estimated from the dataset based on a biological understanding. 
+
+Population growth in bacteria has been studied extensively due to its application in predicting food spoilage and food poisoning \citep{Micha2011}. The abundance of available data has led to the development of multiple mechanistic models to describe the population growth curve \citep{Micha2011}. Bacterium grown in lab culture often displays a sigmoidal curve with three distinct phases: lag phase, exponential growth phase, and stationary phase \citep{Monod1949}. In this study, I compared the fit of mechanistic and phenomenological models across a range of bacterial growth dataset to assess the performance of the two types of models. Quadratic and cubic equations were used for the phenomenological models and logistic and Gompertz models were used for the mechanistic models. 
+
 
 \section{Methods}
 
@@ -60,19 +64,40 @@ A logistic model (3) and a Gompertz model (4), both rewritten to contain paramet
 N_t= \frac{N_0 Ke^{rt}}{N_{max} + N_0 \left(e^{rt} - 1\right)} \\
 log(N_t) = N_{0} + \left(- N_{0} + N_{max}\right) e^{- e^{\frac{e r_{max} \left(- t + t_{lag}\right)}{\left(- N_{0} + N_{max}\right) \log{\left(10 \right)}} + 1}}
 \end{align}
-Where $N_t$ is the momentary population or abundance of the microbe, $t$ is time, $N_0$ is the initial population of microbes, $N_{max}$ is the population of microbes approached at the stationary phase, $r_{max}$ is the maximum growth rate, and $t_{lag}$ is the time point when the population starts to grow exponentially (the end of lag phase) \cite{Zwietering1990}. \par
+Where $N_t$ is the momentary population or abundance of the microbe, $t$ is time, $N_0$ is the initial population of microbes, $N_{max}$ is the population of microbes approached at the stationary phase, $r_{max}$ is the maximum growth rate, and $t_{lag}$ is the time point when the population starts to grow exponentially (the end of lag phase) (\cite{Zwietering1990}, \citep{Micha2011}).\par
 
-The logistic model used in this study is adapted from the Verhulst’s equation, which can be used to describe the population growth of any species that follow a sigmoidal curve (Micha & Corradini, 2011). The Gompertz model is the most widely used mechanistic model for sigmoidal microbial growth curves and contains the parameter $t_{lag}$ to include the lag phase in the model (Micha).\par
+The logistic model used in this study is adapted from the Verhulst’s equation, which can be used to describe the population growth of any species that follow a sigmoidal curve \cite{Micha2011}. The Gompertz model is the most widely used mechanistic model for sigmoidal microbial growth curves and contains the parameter $t_{lag}$ to include the lag phase in the model \cite{Micha2011}.\par
 
-In order to improve the fit of the NLLS models, models were applied repeatedly with different initial parameters to find the model with the best parameter estimate. A rolling regression approach was used to estimate the $r_{max}$ value. A linear regression ($Population = a Time + b$) was applied to a window of a restricted set of $x$ variables ($window width = 45\%$ of the total data points) in a subset, which moved along the entire length of the $x$. The maximum value of gradient found across the linear regressions was used as the initial estimate of $r_max$. This value was then used to make a normal distribution with the value as the mean and $value*2$ as the standard deviation. 100 values were randomly selected from this distribution, which was used as the initial $r_{max}$ value for model fitting. If the estimated $r_{max}$ value from rolling regression was above 1 (Bae, which is one of the papers from which the dataset for this study was compiled, never found $r_{max}$ value above 1), 100 values were randomly selected from a uniform distribution between 0 and 0.0005. The model with the lowest AIC value (described below in Model Comparison) were then chosen as the best model for the logistic model. For the Gompertz model, the time at which the highest population growth was detected (points where there was the highest difference in population size in-between) was used as the initial estimate of $t_{lag}$ value. This value was then used to construct a normal distribution in the same way as $r_{max}$ and 100 values were randomly sampled from this distribution to be used as the different initial $t_{lag}$ values. The initial value of $N_0$ and $N_max$ was kept constant as the minimum population size and maximum population size of the subset respectively. \par
+In order to improve the fit of the NLLS models, models were applied repeatedly with different initial parameters to find the model with the best parameter estimate. A rolling regression approach was used to estimate the $r_{max}$ value. A linear regression ($Population = a Time + b$) was applied to a window of a restricted set of $x$ variables ($window width = 45\%$ of the total data points) in a subset, which moved along the entire length of the $x$. The maximum value of gradient found across the linear regressions was used as the initial estimate of $r_max$. This value was then used to make a normal distribution with the value as the mean and $value*2$ as the standard deviation. 100 values were randomly selected from this distribution, which was used as the initial $r_{max}$ value for model fitting. If the estimated $r_{max}$ value from rolling regression was above 1 (\cite{Bae2014}, which is one of the papers from which the dataset for this study was compiled, never found $r_{max}$ value above 1), 100 values were randomly selected from a uniform distribution between 0 and 0.0005. The model with the lowest AIC value (described below in Model Comparison) were then chosen as the best model for the logistic model. For the Gompertz model, the time at which the highest population growth was detected (points where there was the highest difference in population size in-between) was used as the initial estimate of $t_{lag}$ value. This value was then used to construct a normal distribution in the same way as $r_{max}$ and 100 values were randomly sampled from this distribution to be used as the different initial $t_{lag}$ values. The initial value of $N_0$ and $N_max$ was kept constant as the minimum population size and maximum population size of the subset respectively. \par
 
 \subsection{Model comparison}
-Akaike information criterion (AIC) was used to quantitatively compare the fit of different models. AIC calculates a score based on the maximum likelihood of the model on a given dataset while taking a penalty for the number of parameters in the model based on the idea of parsimony (Johnson &Omland). First, each model within a subset was ranked according to their AIC scores with models with the lowest AIC value as first. A model was deemed better than the other if its AIC score  was smaller than the other by more than 2. The proportions of each model in each rank were compiled across all the subsets to examine which model had the best fit across all species. \par
+Akaike information criterion (AIC) was used to quantitatively compare the fit of different models. AIC calculates a score based on the maximum likelihood of the model on a given dataset while taking a penalty for the number of parameters in the model based on the idea of parsimony \cite{Johnson2004}. First, each model within a subset was ranked according to their AIC scores with models with the lowest AIC value as first. A model was deemed better than the other if its AIC score  was smaller than the other by more than 2. The proportions of each model in each rank were compiled across all the subsets to examine which model had the best fit across all species. \par
 
 \section{Results}
+The frequency of each model’s occurrence in each rank is summarized in Figure1 and Figure3. Mechanistic models consisted 74\% of rank 1, 58\% of rank 2, 26\% of rank 3, and 37\% of rank 4 (Figure1, Figure3). Gompertz model ranked 1st across all subsets most frequently, consisting 51\% of rank 1, followed by 0.24\%, 14\%, and 11\% of logistic, cubit, and quadratic model respectively (Figure1, Figure3). \par
 
+Of the 1140 times (285*4) models were fitted, model fitting failed 21 times in total. Of the 21 times the model fitting failed, 62\% of failure were by mechanistic models (Figure1). Fitting failure happened the most in logistic models, followed by cubic and then Gompertz models (Figure1). Quadratic model never failed to fit (Figure1). 81\% of model failure occurred in subsets with very small number of data points (4 or 5 data points; Example in Figure2C). \par
 
+\begin{figure}[H]
+\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{Table.pdf}
+\caption{Frequency of each model category and type in each rank based on AIC values. Grade shows the rank of each model within each rank.} 
+\end{figure}
+
+\begin{figure}[H]
+\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{Example.pdf}
+\caption{Examples of model fit for each subset. (A) Poor fit of Gompertz but good fit of phenomenological models (B) Good fit of Gompertz but poor fit of other models (C) Subset with small number of data points (n=5) (D) Subset where no models fitted well.}
+\end{figure}
+
+\begin{figure}[H]
+\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{Model_comparison.pdf}
+\caption{The frequency of each (a) model and (b) model category in each rank based on AIC values} 
+\end{figure}
 
 \section{Discussion}
+The result of this study showed that Gompertz model had the best performance across all the datasets while phenomenological models performed poorly across data. This is in agreement with past study \citep{Zwietering1990} that showed Gompertz model produced the best fit in 70\% of the cases while quadratic model only fitted 30\% of the time. However, it performed poorly when dataset was small (Figure2C) or dataset deviated from sigmoidal (Figure2D). This was also found by \cite{Buchanan1997} that found linear models tend to outperform mechanistic models when dataset is small.  
 
+
+
+\bibliography{Mini_Project}
+\bibliographystyle{apalike}
 \end{document}

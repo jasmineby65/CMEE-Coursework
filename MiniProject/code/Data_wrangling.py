@@ -53,3 +53,5 @@ data.head()
 
 # Exporting as new csv
 data.to_csv("../data/Data.csv", index=False)
+
+print("Data wragling done!")

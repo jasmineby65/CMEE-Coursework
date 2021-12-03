@@ -4,11 +4,14 @@
 # Desc: run all the codes for miniproject and compile a PDF report
 # Date: December 2021
 
-ipython Data_wrangling.py  
+ipython3 Data_wrangling.py  
 
 Rscript Modelling.R
 Rscript Comparison.R
 
+pdflatex Report.tex
+bibtex Report.aux
+pdflatex Report.tex
 pdflatex Report.tex
 
 #exit

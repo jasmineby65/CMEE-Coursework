@@ -8,13 +8,15 @@ length(unique(data$Citation))
 length(unique(data$Medium))
 unique(data$PopBio_units)
 
-# Subset single experiments
-subset <- subset(data, ID == "1")
-subset["LogP"] <- log(subset$PopBio)
-head(subset)
+source("Modelling.R")
 
-plot(subset$Time, subset$PopBio)
-plot(subset$Time, subset$LogP)
+# # Subset single experiments
+# subset <- subset(data, ID == "1")
+# subset["LogP"] <- log(subset$PopBio)
+# head(subset)
+# 
+# plot(subset$Time, subset$PopBio)
+# plot(subset$Time, subset$LogP)
 
 ## Modelling each subset of data ##
 require(dplyr)
@@ -61,14 +63,20 @@ for(i in 0:length(unique(Finals$ID))){
 }
 Finals
 
+# Examining failed plots
 fail <- c()
 fail <- Finals$ID[is.na(Finals$rank)]
 fail
-datapoints <- c()
-for(i in fail){
-  print(Finals[Finals$ID == i,])
-}
+length(fail)
+type <- Finals$Type[fail]
+type
 
+sum(type=="Cubic")
+sum(type=="Logistic")
+sum(type=="Quadratic")
+sum(type=="Gompertz")
+
+datapoints <- c()
 
 for(i in fail){
   datapoints <- c(datapoints, length(data$ID[data$ID==i]))  
@@ -76,19 +84,34 @@ for(i in fail){
 datapoints
 sum(datapoints==5|datapoints==4)/length(datapoints)
 
-plots[[51]]
 
 big <- fail[datapoints > 5]
 big
-for(i in big){
-  print(Finals[Finals$ID==i,])
-}
-plots[[91]]
-plots[[107]]
-plots[[111]]
-plots[[162]]
-plots[[166]]
-plots[[173]]
+
+
+#Plotting examples 
+subset <- subset(data, ID == 1)
+models <- subset(Finals, ID == 1)
+plot1 <- plotting(subset, models)
+plot1
+subset <- subset(data, ID == 27)
+models <- subset(Finals, ID == 27)
+plot27 <- plotting(subset, models)
+plot27
+subset <- subset(data, ID == 50)
+models <- subset(Finals, ID == 50)
+plot50 <- plotting(subset, models)
+
+subset <- subset(data, ID == 110)
+models <- subset(Finals, ID == 110)
+plot165 <- plotting(subset, models)
+
+require(ggpubr)
+fig <- ggarrange(plot1, plot27, plot50, plot165, nrow=2, ncol=2, labels = c("A","B","C","D"))
+pdf("Example.pdf", 15, 15)
+fig
+dev.off()
+
 
 ## Frequency of rank ##
 # Type
@@ -147,12 +170,17 @@ result_table <- data.frame(Rank = rank,
                            Model_frequency = Frequency2,
                            Model_grade = Grade2)
 result_table$Rank <- as.factor(result_table$Rank)
-write.csv(result_table, "../results/Table.csv")
 
+df <- sapply(result_table, as.character)
+df[is.na(df)] <- " "
+df
+
+library(gridExtra)
+pdf("Table.pdf", 10, 6)
+grid.table(df)
+dev.off()
 ## Comparison plot ##
 require(ggplot2)
-
-cbPalette <- c("#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
 
 plot_type <- ggplot(result_table, aes(fill=Model, y=Model_frequency, x=Rank)) + 
   geom_bar(position="fill", stat="identity") +
@@ -163,14 +191,8 @@ plot_type <- ggplot(result_table, aes(fill=Model, y=Model_frequency, x=Rank)) +
   ggtitle("(a) Model type")
 plot_type
 
-
-pdf("../plots/Model_type.pdf", 10, 7)
-plot_type
-dev.off()
-
 plot_category <- ggplot(result_table, aes(fill=Category, y=Category_frequency, x=Rank)) + 
   geom_bar(position="fill", stat="identity") +
-  scale_fill_manual(values=cbPalette) +
   xlab("Rank") + ylab("Frequency") +
   theme_bw() + 
   theme(panel.grid.minor = element_blank()) +
@@ -183,48 +205,22 @@ require(ggpubr)
 figure <- ggarrange(plot_type, plot_category, 
           nrow = 2, align = c("v"))
 figure
-pdf("../results/Model_comparison.pdf", 10, 14)
+pdf("Model_comparison.pdf", 10, 14)
 figure
 dev.off()
 
-
+print("Fished modelling and comparison!")
 ## Making jpeg plots of each subset ###
-plots <- list()
-for(i in 0:max(data$ID)){
-  subset <- subset(data, ID == i)
-  models <- subset(Finals, ID == i)
-  plots[[i+1]] = plotting(subset, models)
-  
-  jpeg(paste0("Subset",i,".jpg"), 600, 500)
-  plots[[i+1]]
-  dev.off()
-  
-  cat("Plot", i, "made!")
-}
+# plots <- list()
+# for(i in 0:max(data$ID)){
+#   subset <- subset(data, ID == i)
+#   models <- subset(Finals, ID == i)
+#   plots[[i+1]] = plotting(subset, models)
+#   
+#   jpeg(paste0("../plots/Subset",i,".jpg"), 600, 500)
+#   plots[[i+1]]
+#   dev.off()
+#   
+#   cat("Plot", i, "made!")
+# }
 
-images <- list()
-for(i in 1:12){
- images[[i]]<- plots[[i]]  
-}
-images
-fig1 <- ggarrange(plotlist = images, ncol = 3, nrow = 4, align = c("v"))
-fig1
-
-pdf("../results/plots1.pdf", 15, 16)
-fig1
-dev.off()
-
-images <- list()
-13+15
-13
-285
-for(i in 13:27){
-  images[[i]]<- plots[[i]]  
-}
-
-fig2 <- ggarrange(plotlist = images, ncol = 3, nrow = 5, align = c("v"))
-
-
-pdf("../results/plots2.pdf", 15, 24)
-fig2
-dev.off()
