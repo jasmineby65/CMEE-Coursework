@@ -1,0 +1,78 @@
+\documentclass[11pt, a4paper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsfonts, amsmath, amssymb}
+\usepackage[none]{hyphenat}
+\usepackage{graphicx}
+\setlength{\parskip}{0.15cm}
+\usepackage[round]{natbib}
+\usepackage{natbib}
+\bibliographystyle{stylename}
+
+\bibliography{Mini_Project}
+
+
+
+\begin{document}
+
+\begin{titlepage}
+\begin{center}
+
+\vspace*{4cm}
+\Huge{\textbf{Mechanistic models fit better than phenomenological models for functional responses across species}}\\[5mm]
+\huge{Jasmine Yang}\\[1mm]
+\large{zy1921@ic.ac.uk}\\[3mm]
+\Large{Imperial College London}\\
+
+\vspace*{9cm}
+\Large{Computing Miniproject Report}\\[3mm]
+\today\\[5mm]
+\large{Word count: }
+
+\end{center}
+\end{titlepage}
+
+\section{Abstract}
+
+
+\section{Introduction}
+
+\section{Methods}
+
+\subsection{Data}
+A collection of functional response datasets compiled from 10 papers examining change in microbial population over time was used for this study. Each dataset contained information on the study species, the temperature in which the experiment was conducted, the microbial growth medium, the population or biomass of the microbes, and the corresponding time point when the measurement was taken. Model fitting was conducted on each subset of data with a unique combination of species, temperature, growth medium within a dataset to ensure the independence of the data points. Subsets containing negative population or negative time points measurements were removed from this study due to uncertainty in measurement methods. A total of 285 subsets were used for model fitting.
+ 
+\subsection{Computing tools}
+Python 3.8.10 (Python Software Foundation, https://www.python.org/) was used for data wrangling to compile subsets of data according to species, temperature, growth medium, and original dataset. Removal of subset containing negative population and time was also conducted at this stage. The package “pandas” was used to import the datasets as pandas object for ease of modification. \par
+
+R version 3. 6. 3 (https://www.r-project.org/) was used for all modelling and model comparison since it has an abundance of packages containing functions for modelling and statistical analysis. The package “rollRegress” and “minpack.lm ” were used to conduct rolling regression and non-linear least-squares model fitting respectively.  The package “dplyr” was used to apply model fitting for each subset of data. The package “ggplot2” and “ggpubr” were used to produce plot graphics. 
+
+
+\subsection{Model fitting}
+Four different models were fitted on each subset to model the population growth curve; two phenomenological models and two mechanistic models. A quadratic equation (1) and a cubic equation (2) were fitted for phenomenological models as linear models in R.
+\begin{align}
+y = ax^2 + bx + c \\
+y = ax^3 + bx^2 + cx + d
+\end{align}
+Where $y$ is the population or biomass of the microbe and $x$ is time. \par
+
+A logistic model (3) and a Gompertz model (4), both rewritten to contain parameters relevant to microbial growth, were fitted for mechanistic models as NLLS models in R. 
+\begin{align}
+N_t= \frac{N_0 Ke^{rt}}{N_{max} + N_0 \left(e^{rt} - 1\right)} \\
+log(N_t) = N_{0} + \left(- N_{0} + N_{max}\right) e^{- e^{\frac{e r_{max} \left(- t + t_{lag}\right)}{\left(- N_{0} + N_{max}\right) \log{\left(10 \right)}} + 1}}
+\end{align}
+Where $N_t$ is the momentary population or abundance of the microbe, $t$ is time, $N_0$ is the initial population of microbes, $N_{max}$ is the population of microbes approached at the stationary phase, $r_{max}$ is the maximum growth rate, and $t_{lag}$ is the time point when the population starts to grow exponentially (the end of lag phase) \cite{Zwietering1990}. \par
+
+The logistic model used in this study is adapted from the Verhulst’s equation, which can be used to describe the population growth of any species that follow a sigmoidal curve (Micha & Corradini, 2011). The Gompertz model is the most widely used mechanistic model for sigmoidal microbial growth curves and contains the parameter $t_{lag}$ to include the lag phase in the model (Micha).\par
+
+In order to improve the fit of the NLLS models, models were applied repeatedly with different initial parameters to find the model with the best parameter estimate. A rolling regression approach was used to estimate the $r_{max}$ value. A linear regression ($Population = a Time + b$) was applied to a window of a restricted set of $x$ variables ($window width = 45\%$ of the total data points) in a subset, which moved along the entire length of the $x$. The maximum value of gradient found across the linear regressions was used as the initial estimate of $r_max$. This value was then used to make a normal distribution with the value as the mean and $value*2$ as the standard deviation. 100 values were randomly selected from this distribution, which was used as the initial $r_{max}$ value for model fitting. If the estimated $r_{max}$ value from rolling regression was above 1 (Bae, which is one of the papers from which the dataset for this study was compiled, never found $r_{max}$ value above 1), 100 values were randomly selected from a uniform distribution between 0 and 0.0005. The model with the lowest AIC value (described below in Model Comparison) were then chosen as the best model for the logistic model. For the Gompertz model, the time at which the highest population growth was detected (points where there was the highest difference in population size in-between) was used as the initial estimate of $t_{lag}$ value. This value was then used to construct a normal distribution in the same way as $r_{max}$ and 100 values were randomly sampled from this distribution to be used as the different initial $t_{lag}$ values. The initial value of $N_0$ and $N_max$ was kept constant as the minimum population size and maximum population size of the subset respectively. \par
+
+\subsection{Model comparison}
+Akaike information criterion (AIC) was used to quantitatively compare the fit of different models. AIC calculates a score based on the maximum likelihood of the model on a given dataset while taking a penalty for the number of parameters in the model based on the idea of parsimony (Johnson &Omland). First, each model within a subset was ranked according to their AIC scores with models with the lowest AIC value as first. A model was deemed better than the other if its AIC score  was smaller than the other by more than 2. The proportions of each model in each rank were compiled across all the subsets to examine which model had the best fit across all species. \par
+
+\section{Results}
+
+
+
+\section{Discussion}
+
+\end{document}
