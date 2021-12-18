@@ -22,7 +22,7 @@ source("zy1921_HPC_2021_main.R")
 # 
 # file_name = paste0("Test_result", iter, ".rda")
 # 
-# cluster_run(speciation_rate = speciation, size = popu_size, wall_time = 10, interval_rich = 1, interval_oct = popu_size/10, burn_in_generations = 8*popu_size, output_file_name = file_name)
+# cluster_run(speciation_rate = speciation, size = popu_size, wall_time = 5, interval_rich = 1, interval_oct = popu_size/10, burn_in_generations = 8*popu_size, output_file_name = file_name)
 # }
 
 
