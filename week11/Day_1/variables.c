@@ -11,6 +11,8 @@ int main(void)
     
     float y = 1.2; 
     
+    // Two types of data in C: integral type and floating point type
+
     // Integral type of variable counts as 0000 => 0, 0001 => 1, 0010 => 2, this includes:
     // calculation in this type is much faster than floating point
     char c; // 1-byte, which is typically 8 bites (bytes are read from left to right but bits are read from right to left)
@@ -19,8 +21,8 @@ int main(void)
     long long int lli; // large enough to hold long int and more 
 
     // Floating point types of varibles include:
-    float f;
-    double d;
+    float f; // contains decimals but can never represent the real value due to the limit in how much the decimal can extend
+    double d; // twice as precise as float (float uses 32bits but double uses 64, allowing it to extend longer beyond the decimal point than float)
     long double ld; 
 
     // Basic arithmatic operators in C:

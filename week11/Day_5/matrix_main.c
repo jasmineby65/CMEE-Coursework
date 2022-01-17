@@ -13,7 +13,7 @@ typedef struct int_matrix { // Making a new data structure called int_matrix and
     and the second pointer correspond to the columns */
 
 } int_matrix;
-
+53
 
 void initialise_matrix(int nrows, int ncols, int_matrix* m) //initialising empty matrix of specific size
 {

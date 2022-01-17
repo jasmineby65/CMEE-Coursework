@@ -19,8 +19,10 @@ TreeHeight <- function(degrees,distance){
 
 TreeData <- read.csv("../data/trees.csv", header=T)
 head(TreeData)
-data <- TreeHeight(TreeData$Distance.m,TreeData$Angle.degrees)
+
+data <- TreeHeight(TreeData$Angle.degrees, TreeData$Distance.m)
 TreeData$Tree.Height.m = data #Addting height as new column 
 head(TreeData)
+
 write.csv(TreeData,"../results/TreeHts.csv") 
-print("TreeHts.csv saved in data directory")
+print("TreeHts.csv saved in results directory")

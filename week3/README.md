@@ -200,7 +200,7 @@ source("PP_Regress.R")
 
 &nbsp;
 
-# preallocate.R"
+# preallocate.R
 Compares the speed of function excution with and without pre-allocating memory for vector.  
 Language: R
 
