@@ -14,3 +14,6 @@ results/
 .ipynb_checkpoints/
 plots/
 !plots/.gitkeep
+*.docx
+*.~lock.Poisson.docx#
+*.synctex.gz
