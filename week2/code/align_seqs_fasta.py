@@ -63,7 +63,7 @@ def calculate_score(s1, s2, l1, l2, startpoint):
 
 ## A function that finds the best match (highest score) for the two sequences
 def best_alignment(s1, s2, l1, l2):
-    """ finds the best alighment for two sequnces imported from a csv file"""
+    """ finds the best alighment for two sequnces"""
     my_best_align = None
     my_best_score = -1
     my_best_alignment = ""
@@ -94,7 +94,7 @@ def best_alignment(s1, s2, l1, l2):
 
 
 def main(argv): 
-    """Makes sure the "main" function is called from command line"""  
+    """Runs the program"""  
     if len(argv) == 1:
         s1, s2, l1, l2 = prepare_sequence()
     else:

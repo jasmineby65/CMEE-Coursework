@@ -35,6 +35,7 @@ def output_name(path):
     return final
 
 def main(argv):
+    """ The main function that runs the program """
     output_file = output_name(sys.argv[1])
 
     with open(sys.argv[1],'r') as f:

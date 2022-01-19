@@ -13,17 +13,16 @@
 TreeHeight <- function(degrees,distance){
   radians <- degrees * pi / 180
   height <- distance * tan(radians)
-  #print(paste("Tree height is:", height))
   return(height)
 }
 
 args <- commandArgs(trailingOnly=TRUE) # Making a string from command line arguments 
 TreeData <- read.csv(args, header=T)
-#head(TreeData)
+
 
 data <- TreeHeight(TreeData$Angle.degrees, TreeData$Distance.m)
 TreeData$Tree.Height.m <- data # Addting height as new column 
-#head(TreeData)
+
 
 nopath <- basename(args) # Removing path to the file
 filename <- tools::file_path_sans_ext(nopath) # Remove extension

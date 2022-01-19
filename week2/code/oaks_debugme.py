@@ -2,6 +2,7 @@
 
 import csv
 import sys
+import doctest
 
 #Define function
 def is_an_oak(name):
@@ -21,8 +22,18 @@ def is_an_oak(name):
 
     >>> is_an_oak("Quercuss")
     False
+
+    >>> is_an_oak("Quercussquercus")
+    False
+
+    >>> is_an_oak("quercus")
+    True
+
+    >>> is_an_oak("quercusquercus")
+    False
+
     """
-    return name == 'Quercus'
+    return name.lower() == 'quercus'
 
 def main(argv): 
     """ Produce a csv file containing the name of oak species found in the input csv file """
@@ -33,6 +44,8 @@ def main(argv):
     csvwrite = csv.writer(g)
     oaks = set()
     #import ipdb; ipdb.set_trace()
+    csvwrite.writerow(["Genus", "species"])
+    
     for row in taxa:
         print(row)
         print ("The genus is: ") 
@@ -45,3 +58,5 @@ def main(argv):
     
 if (__name__ == "__main__"):
     status = main(sys.argv)
+
+doctest.testmod() 

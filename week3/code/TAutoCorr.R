@@ -2,7 +2,7 @@
 rm(list=ls())
 load("../data/KeyWestAnnualMeanTemperature.RData")
 # Reload datasets written with the function save
-View(ats)
+#View(ats)
 head(ats)
 par(mfrow = c(1,1))
 plot(ats)

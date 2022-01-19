@@ -98,15 +98,41 @@ source("DataWrangTidy.R")
 
 &nbsp;
 
-# Florida_warming.R
+# Florida.R
 Perform a permutation analysis on the annual temperature dataset from Key West in Florida to examine whether Florida is warming. 
-Produces two PDF images (Florida1.pdf, Florida2.pdf). Results are summarised in Florida_result.tex (LaTeX).  
+Produces two PDF images (Florida1.pdf, Florida2.pdf). Results are summarised in Florida.tex (LaTeX).  
 Language: R
 
 ### Usage
 ```R
 install.pacakages("ggplot2")
-source("Florida_warming.R)
+source("Florida.R)
+```
+
+&nbsp;
+
+# get_TreeHeight.py
+This program calculates heights of trees given distance of each tree 
+from its base and along to its top from any file. The calculated heights are saved to a csv ("inputfilename_treeheights.csv").   
+Language; python3
+
+### Usage 
+```python
+# Use the following code in bash terminal to run the program by specifying specific input file:
+python3 get_TreeHeight.py filename
+```
+
+&nbsp;
+
+# get_TreeHeight.R
+This program calculates heights of trees given distance of each tree 
+from its base and along to its top from any file. The calculated heights are saved to a csv ("inputfile_treeheights.csv").   
+Language; R
+
+### Usage 
+```R
+# Use the following code in bash terminal to run the program by specifying specific input file:
+Rscript get_TreeHeight.R inputfile
 ```
 
 &nbsp;
@@ -223,6 +249,17 @@ source("Ricker.R")
 
 &nbsp;
 
+# run_get_TreeHeight.sh
+A shell script that runs get_TreeHeight.py and get_TreeHeight.R using "tree.csv" as the input file.  
+Language: shell
+
+### Usage
+```shell
+bash run_get_TreeHeight.sh
+```
+
+&nbsp;
+
 # sample.R
 Compares the speed of function excution with and without pre-allocating memory for vector and the use of `sapply()` and `lapply()` functions.   
 Language: R
@@ -243,6 +280,19 @@ Language: R
 ```R
 install.packages("sqldf")
 source(SQLinR.R)
+```
+
+&nbsp;
+
+# TAutoCorr.R
+Perform a permutation analysis on the annual temperature dataset from Key West in Florida to examine whether there is an correlation between temperatures of succesive years. 
+Produces a PDF images (Florida_Auto.pdf). Results are summarised in TAutoCorr.tex (LaTeX).  
+Language: R
+
+### Usage
+```R
+install.pacakages("ggplot2")
+source("TAutoCorr.R")
 ```
 
 &nbsp;

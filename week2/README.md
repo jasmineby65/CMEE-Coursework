@@ -1,3 +1,4 @@
+
 # align_seqs.py
 
 Functions that import two DNA base sequnces from csv file and find best alignment   
@@ -5,7 +6,9 @@ Language: python3
 
 ### Usage
 ```python
-# Import the program 
+%run align_seqs.py
+
+# To use individual funtions, import the program 
 import align_seqs
 
 # Import DNA sequences from a csv file and extract the sequnce (s1, s2) and sequnce length (l1, l2)
@@ -16,6 +19,41 @@ calculate_score(s1, s2, l1, l2, startpoint)
 
 # finds the best alighment for two sequnces imported from a csv file and saves the best alignment and the corresponding score in a single text file
 best_alignment("csv file")
+```
+
+&nbsp;
+
+
+# align_seqs_better.py
+Takes DNA sequences from two fasta files 
+and save the best alignment and the corresponding score 
+in a single text file named "improved_alignment_result.txt"
+Language: python3
+
+### Usage
+``` python
+%run align_seqs_better.py 
+# This will align sequences from "407228326.fasta" and "407228412.fasta"
+
+# To specify the fasta files alignments, run from bash terminal using the following code:
+python3 align_seqs_better.py file1.fasta file2.fasta
+```
+
+&nbsp;
+
+# align_seqs_fasta.py
+Takes DNA sequences from two fasta files 
+and save the best alignment(s) and the corresponding score 
+in a single text file named "fasta_alignment_result.txt"  
+Language: python3  
+
+### Usage
+```python
+%run align_seqs_fasta.py 
+# This will align sequences from "407228326.fasta" and "407228412.fasta"
+
+# To specify the fasta files alignments, run from bash terminal using the following code:
+python3 align_seqs_fasta.py file1.fasta file2.fasta
 ```
 
 &nbsp;
@@ -221,6 +259,20 @@ Language: python3
 ### Usage 
 ```python
 %run MyExampleScript.py
+```
+
+&nbsp;
+
+# oaks_debugme.py
+Runs through species name in a csv file and saves the oak species (Quercus) in a new csv (JustOaksData.csv)  
+Language: python3
+
+### Usage
+```python
+%run oaks_debugme.py
+
+# To diagnose the is_an_oak() function:
+%run oaks_debugme.py -v
 ```
 
 &nbsp;
