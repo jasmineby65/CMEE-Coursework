@@ -1,63 +1,69 @@
 #!/usr/bin/env python3
 
-""" 
-This program calculates heights of trees given distance of each tree 
-from its base and along to its top, using the trignometric formula: 
-height = distance * tan(radians)
-
-ARGUMENTS:
-degrees: the angle of elevation of tree
-distance: the distance from base of tree (e.g. meters)
-
-OUTPUT:
-The height of the tree, same units as "distance"
-
+"""
+Author: Group3
+Script: get_TreeHeight.py
+Des: Calculate the treeheight according to the degrees and distances
+Usage: python3 get_TreeHeight.py file
+Dep: pandas,math,sys,os
+Date: Oct, 2021
 """
 
-import sys
-import csv
-import math
-import os
+__appname__ = '[get_TreeHeight.py]'
+__author__ = 'Group3'
+__version__ = '0.0.1'
+
+import pandas as pd #data ana
+import math #use math formula
+import sys #interact with the system
+import os #deal with the directory and file
 
 def TreeHeight(degrees, distance):
-    """Calculates heights of trees given distance of each tree from its base and along to its top"""
-    radians = float(degrees) * (math.pi/180)
-    height = float(distance) * (math.tan(radians))
+
+    """
+    Args:
+        degrees: 
+        distance: 
+    Returns:
+        Height
+    Des:
+        calculate the Height by degrees and distance provided
+    
+    """
+    radians = degrees * math.pi / 180 #
+    #radians = math.radians(degrees)
+    tans = radians.apply(lambda x: math.tan(x))
+    height = distance * tans
     return height
 
-def output_name(path):
-    """Remove path and file extension from a file path"""
-    base = os.path.basename(path) # Removing path
-    name = os.path.splitext(base)[0] # Removing file extension 
-
-    path = ("../results/", name, "_treeheights.csv")
-    final = "".join(path)
-    return final
-
 def main(argv):
-    """ The main function that runs the program """
-    output_file = output_name(sys.argv[1])
 
-    with open(sys.argv[1],'r') as f:
-        with open(output_file, 'w') as g:
+    """ 
+    Main process running the program.
+    """ 
+    if len(sys.argv) == 2:
+        try:
+            MyData = pd.read_csv(sys.argv[1]) 
+            infilename = os.path.basename(sys.argv[1]).split(sep=".")[0]
+        except (FileNotFoundError):
+            print ("Your files provided here are not accessible")
+            sys.exit(0)
+    else:
+        print ("We will use the default path here\n ")
+        path1 = "../data/trees.csv"
+        infilename = os.path.basename(path1).split(sep=".")[0]
+        MyData = pd.read_csv(path1)
 
-            csvread = csv.reader(f)
-            csvwrite = csv.writer(g)
+    outputfile = "../results/"+infilename+"_treeheights.csv"
 
-            # Making header
-            header = []
-            header = next(csvread)
-            header.append("Tree.Height.m")
-            csvwrite.writerow(header)
+    MyData["Tree.Height.m"] = TreeHeight(MyData["Angle.degrees"],MyData["Distance.m"])
+    MyData.to_csv(outputfile,index=False)    
+    return 0
 
-            for row in csvread:
-                height = TreeHeight(row[2], row[1])
-                row.append(height)
-                csvwrite.writerow(row)
-
-            return print("csv file made in results directory")
-
-
-if __name__ == "__main__": 
+if (__name__ == "__main__"):
+    print ("We are now running:",sys.argv[0],"\n")
     status = main(sys.argv)
     sys.exit(status)
+
+
+

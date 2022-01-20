@@ -1,0 +1,38 @@
+\documentclass[12pt, a4paper]{article}
+
+\usepackage[top=0.5 cm, left=2 cm, right=2 cm, bottom=0cm]{geometry}
+\usepackage{graphicx}
+
+\title{Is the annual temperature correlated between \protect\\ successive years?}
+
+\author{Jasmine Yang}
+
+\date{\today}
+
+\begin{document}
+  \thispagestyle{empty}  
+  \maketitle
+
+  
+  \section*{Introduction}
+  The annual temperature dataset from Key West in Florida, USA for the 20th century is analysed to examine whether there is a significant correlation between annual temperatures of successive years.
+  
+  
+  \section*{Results}
+    Permutation analysis gave a p-value of 0.0004, with four of the permutated correlation coefficients (number of permutation = 10,000) exceeding the correlation coefficient of the original data ($r = 0.326$).
+Therefore, the temperature change across the years in Florida is not random.
+
+	\vspace{10mm} %5mm vertical space
+
+
+  \begin{figure}[h]
+  \begin{center}
+    \includegraphics[scale=0.5]{../data/Florida_Auto.pdf}    
+    \label{Fig1}
+    \caption{Distribution of the permutated correlation coefficients (n=10,000). The red line shows the observed correlation coefficient of the original data.}
+  \end{center}
+  \end{figure}
+
+
+
+\end{document}

@@ -1,8 +1,11 @@
 """ Runs through species name in a csv file and saves the oak species (Quercus) in a new csv (JustOaksData.csv) """
+__appname__ = 'oaks_debugme.py'
+__author__ = 'Group3 - Cool Coatis'
+__version__ = '0.0.1'
+__license__ = "License for this code/program"
 
 import csv
 import sys
-import doctest
 
 #Define function
 def is_an_oak(name):
@@ -58,5 +61,3 @@ def main(argv):
     
 if (__name__ == "__main__"):
     status = main(sys.argv)
-
-doctest.testmod() 
