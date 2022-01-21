@@ -16,6 +16,9 @@ if (length(args) == 0) {
   args[1] <- "../data/trees.csv" 
 } else if (length(args) == 1 && file.exists(args[1])){
   print(paste("The input file is:", args[1]))
+} else{
+   print("we can not find the input file. Using trees.csv")
+   args[1] <- "../data/trees.csv"
 }
 
 
@@ -30,7 +33,7 @@ TreeHeight <- function(degrees, distance){
   return (height)
 }
 
-Trees$TreeHeight <- TreeHeight(Trees$Angle.degrees, Trees$Distance.m) #runs the function and rint output in TreeHeight
+Trees$Tree.Height.m <- TreeHeight(Trees$Angle.degrees, Trees$Distance.m) #runs the function and rint output in TreeHeight
 #Trees # to display the table in bash 
 
 #write.csv(Trees, "../results/trees.csv", row.names  =F)#write in new file
@@ -41,7 +44,7 @@ Trees$TreeHeight <- TreeHeight(Trees$Angle.degrees, Trees$Distance.m) #runs the 
 # paste0 is like paste() but it has sep = "" as default argument , so any string gets merged together
 
 #write.csv(Trees, paste0(tools::file_path_sans_ext(args[1]),"_treeheights.csv"), "../results")
-write.csv(Trees, paste0("../results/",basename(tools::file_path_sans_ext(args[1])),"_treeheights.csv"))
+write.csv(Trees, paste0("../results/",basename(tools::file_path_sans_ext(args[1])),"_treeheights.csv"),row.names = FALSE)
 
 #output_folder <- paste0("../results/",outputfilename)
 #write.csv(Trees, output_folder)
