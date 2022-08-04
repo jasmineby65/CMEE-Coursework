@@ -1,6 +1,6 @@
-#######################
-####### mlotst  #######
-#######################
+######################
+####### intpp  #######
+######################
 
 
 rm(list = ls())
@@ -16,12 +16,11 @@ getwd()
 ############################################### Timeseries ####################################################
 
 
-
 ####################
 #### Whole area ####
 ####################
 
-data <- as.data.frame(read.csv("../csv/CMCC-ESM2_mlotst_whole.csv", header = TRUE, stringsAsFactors = F))
+data <- as.data.frame(read.csv("../csv/CMCC-ESM2_intpp_whole.csv", header = TRUE, stringsAsFactors = F))
 head(data)
 
 
@@ -61,9 +60,9 @@ slope(winter2)
 
 
 ### Result summary 
-sink("../output/CMCC-ESM2/mlotst_whole.txt")
+sink("../output/CMCC-ESM2/intpp_whole.txt")
 
-cat("mlotst CMCC-ESM2\nWhole region result:\n\n\n")
+cat("intpp CMCC-ESM2\nWhole region result:\n\n\n")
 
 cat("Annual result:\n")
 print(summary(mean1))
@@ -99,7 +98,9 @@ print("Whole area output done!")
 #### Inc zone ####
 ##################
 
-data <- as.data.frame(read.csv("../csv/CMCC-ESM2_mlotst_inc.csv", header = TRUE, stringsAsFactors = F))
+#### Time series ####
+
+data <- as.data.frame(read.csv("../csv/CMCC-ESM2_intpp_inc.csv", header = TRUE, stringsAsFactors = F))
 head(data)
 
 
@@ -139,9 +140,9 @@ slope(winter2)
 
 
 ### Result summary 
-sink("../output/CMCC-ESM2/mlotst_inc.txt")
+sink("../output/CMCC-ESM2/intpp_inc.txt")
 
-cat("mlotst CMCC-ESM2\nInc zone result:\n\n\n")
+cat("intpp CMCC-ESM2\nInc zone result:\n\n\n")
 
 cat("Annual result:\n")
 print(summary(mean1))
@@ -177,7 +178,7 @@ print("Inc zone output done!")
 #### Dnc zone ####
 ##################
 
-data <- as.data.frame(read.csv("../csv/CMCC-ESM2_mlotst_dec.csv", header = TRUE, stringsAsFactors = F))
+data <- as.data.frame(read.csv("../csv/CMCC-ESM2_intpp_dec.csv", header = TRUE, stringsAsFactors = F))
 head(data)
 
 
@@ -217,9 +218,9 @@ slope(winter2)
 
 
 ### Result summary 
-sink("../output/CMCC-ESM2/mlotst_dec.txt")
+sink("../output/CMCC-ESM2/intpp_dec.txt")
 
-cat("mlotst CMCC-ESM2\nDec zone result:\n\n\n")
+cat("intpp CMCC-ESM2\nDec zone result:\n\n\n")
 
 cat("Annual result:\n")
 print(summary(mean1))
@@ -250,6 +251,7 @@ sink()
 print("Dec zone output done!")
 
 
+
 ############################################### Correlation with epc100 ####################################################
 
 ##################
@@ -258,7 +260,7 @@ print("Dec zone output done!")
 
 #### Time series ####
 
-data <- as.data.frame(read.csv("../csv/CMCC-ESM2_mlotst_epc100_correlation_inc.csv", header = TRUE, stringsAsFactors = F))
+data <- as.data.frame(read.csv("../csv/CMCC-ESM2_intpp_epc100_correlation_inc.csv", header = TRUE, stringsAsFactors = F))
 head(data)
 
 
@@ -278,9 +280,9 @@ summary(winter1)
 
 
 ### Result summary 
-sink("../output/CMCC-ESM2/mlotst_epc100_correlation_inc.txt")
+sink("../output/CMCC-ESM2/intpp_epc100_correlation_inc.txt")
 
-cat("mlotst vs epc100 CMCC-ESM2\nInc zone result:\n\n\n")
+cat("intpp vs epc 100CMCC-ESM2\nInc zone result:\n\n\n")
 
 cat("Annual result:\n")
 print(summary(mean1))
@@ -304,7 +306,7 @@ print("epc100 Inc zone output done!")
 #### Dnc zone ####
 ##################
 
-data <- as.data.frame(read.csv("../csv/CMCC-ESM2_mlotst_epc100_correlation_dec.csv", header = TRUE, stringsAsFactors = F))
+data <- as.data.frame(read.csv("../csv/CMCC-ESM2_intpp_epc100_correlation_dec.csv", header = TRUE, stringsAsFactors = F))
 head(data)
 
 
@@ -324,9 +326,9 @@ summary(winter1)
 
 
 ### Result summary 
-sink("../output/CMCC-ESM2/mlotst_epc100_correlation_dec.txt")
+sink("../output/CMCC-ESM2/intpp_epc100_correlation_dec.txt")
 
-cat("mlotst vs epc100 CMCC-ESM2\nDec zone result:\n\n\n")
+cat("intpp vs epc100 CMCC-ESM2\nDec zone result:\n\n\n")
 
 cat("Annual result:\n")
 print(summary(mean1))
@@ -340,189 +342,3 @@ print(summary(winter1))
 sink()
 
 print("epc100 Dec zone output done!")
-
-
-############################################### Correlation with intpp ####################################################
-
-##################
-#### Inc zone ####
-##################
-
-#### Time series ####
-
-data <- as.data.frame(read.csv("../csv/CMCC-ESM2_mlotst_intpp_correlation_inc.csv", header = TRUE, stringsAsFactors = F))
-head(data)
-
-
-### Annual mean
-mean1 <- lm(Annual ~ Year, data = data)
-summary(mean1)
-
-
-### Summer mean
-summer1 <- lm(Summer ~ Year, data = data)
-summary(summer1)
-
-
-### Winter mean
-winter1 <- lm(Winter ~ Year, data = data)
-summary(winter1)
-
-
-### Result summary 
-sink("../output/CMCC-ESM2/mlotst_intpp_correlation_inc.txt")
-
-cat("mlotst vs intpp CMCC-ESM2\nInc zone result:\n\n\n")
-
-cat("Annual result:\n")
-print(summary(mean1))
-
-
-cat("\n\nSummer result:\n")
-print(summary(summer1))
-
-
-cat("\n\nWinter result:\n")
-print(summary(winter1))
-
-
-sink()
-
-print("intpp Inc zone output done!")
-
-
-
-##################
-#### Dnc zone ####
-##################
-
-data <- as.data.frame(read.csv("../csv/CMCC-ESM2_mlotst_intpp_correlation_dec.csv", header = TRUE, stringsAsFactors = F))
-head(data)
-
-
-### Annual mean
-mean1 <- lm(Annual ~ Year, data = data)
-summary(mean1)
-
-
-### Summer mean
-summer1 <- lm(Summer ~ Year, data = data)
-summary(summer1)
-
-
-### Winter mean
-winter1 <- lm(Winter ~ Year, data = data)
-summary(winter1)
-
-
-### Result summary 
-sink("../output/CMCC-ESM2/mlotst_intpp_correlation_dec.txt")
-
-cat("mlotst vs intpp CMCC-ESM2\nDec zone result:\n\n\n")
-
-cat("Annual result:\n")
-print(summary(mean1))
-
-cat("\n\nSummer result:\n")
-print(summary(summer1))
-
-cat("\n\nWinter result:\n")
-print(summary(winter1))
-
-sink()
-
-print("intpp Dec zone output done!")
-
-
-
-
-############################################### Correlation with siconc ####################################################
-
-##################
-#### Inc zone ####
-##################
-
-#### Time series ####
-
-data <- as.data.frame(read.csv("../csv/CMCC-ESM2_mlotst_siconc_correlation_inc.csv", header = TRUE, stringsAsFactors = F))
-head(data)
-
-
-### Annual mean
-mean1 <- lm(Annual ~ Year, data = data)
-summary(mean1)
-
-
-### Summer mean
-summer1 <- lm(Summer ~ Year, data = data)
-summary(summer1)
-
-
-### Winter mean
-winter1 <- lm(Winter ~ Year, data = data)
-summary(winter1)
-
-
-### Result summary 
-sink("../output/CMCC-ESM2/mlotst_siconc_correlation_inc.txt")
-
-cat("mlotst vs siconc CMCC-ESM2\nInc zone result:\n\n\n")
-
-cat("Annual result:\n")
-print(summary(mean1))
-
-
-cat("\n\nSummer result:\n")
-print(summary(summer1))
-
-
-cat("\n\nWinter result:\n")
-print(summary(winter1))
-
-
-sink()
-
-print("siconc Inc zone output done!")
-
-
-
-##################
-#### Dnc zone ####
-##################
-
-data <- as.data.frame(read.csv("../csv/CMCC-ESM2_mlotst_siconc_correlation_dec.csv", header = TRUE, stringsAsFactors = F))
-head(data)
-
-
-### Annual mean
-mean1 <- lm(Annual ~ Year, data = data)
-summary(mean1)
-
-
-### Summer mean
-summer1 <- lm(Summer ~ Year, data = data)
-summary(summer1)
-
-
-### Winter mean
-winter1 <- lm(Winter ~ Year, data = data)
-summary(winter1)
-
-
-### Result summary 
-sink("../output/CMCC-ESM2/mlotst_siconc_correlation_dec.txt")
-
-cat("mlotst vs siconc CMCC-ESM2\nDec zone result:\n\n\n")
-
-cat("Annual result:\n")
-print(summary(mean1))
-
-cat("\n\nSummer result:\n")
-print(summary(summer1))
-
-cat("\n\nWinter result:\n")
-print(summary(winter1))
-
-sink()
-
-print("siconc Dec zone output done!")
