@@ -13,6 +13,9 @@ require(jtools)
 setwd("~/../../../media/jasmine/Album/Project/rcode")
 getwd()
 
+############################################### Timeseries ####################################################
+
+
 ####################
 #### Whole area ####
 ####################
@@ -94,6 +97,8 @@ print("Whole area output done!")
 ##################
 #### Inc zone ####
 ##################
+
+#### Time series ####
 
 data <- as.data.frame(read.csv("../csv/CMCC-ESM2_intpp_inc.csv", header = TRUE, stringsAsFactors = F))
 head(data)
@@ -244,3 +249,96 @@ print(slope(winter2))
 sink()
 
 print("Dec zone output done!")
+
+
+
+############################################### Correlation with epc100 ####################################################
+
+##################
+#### Inc zone ####
+##################
+
+#### Time series ####
+
+data <- as.data.frame(read.csv("../csv/CMCC-ESM2_intpp_epc100_correlation_inc.csv", header = TRUE, stringsAsFactors = F))
+head(data)
+
+
+### Annual mean
+mean1 <- lm(Annual ~ Year, data = data)
+summary(mean1)
+
+
+### Summer mean
+summer1 <- lm(Summer ~ Year, data = data)
+summary(summer1)
+
+
+### Winter mean
+winter1 <- lm(Winter ~ Year, data = data)
+summary(winter1)
+
+
+### Result summary 
+sink("../output/CMCC-ESM2/intpp_epc100_correlation_inc.txt")
+
+cat("intpp vs epc 100CMCC-ESM2\nInc zone result:\n\n\n")
+
+cat("Annual result:\n")
+print(summary(mean1))
+
+
+cat("\n\nSummer result:\n")
+print(summary(summer1))
+
+
+cat("\n\nWinter result:\n")
+print(summary(winter1))
+
+
+sink()
+
+print("epc100 Inc zone output done!")
+
+
+
+##################
+#### Dnc zone ####
+##################
+
+data <- as.data.frame(read.csv("../csv/CMCC-ESM2_intpp_epc100_correlation_dec.csv", header = TRUE, stringsAsFactors = F))
+head(data)
+
+
+### Annual mean
+mean1 <- lm(Annual ~ Year, data = data)
+summary(mean1)
+
+
+### Summer mean
+summer1 <- lm(Summer ~ Year, data = data)
+summary(summer1)
+
+
+### Winter mean
+winter1 <- lm(Winter ~ Year, data = data)
+summary(winter1)
+
+
+### Result summary 
+sink("../output/CMCC-ESM2/intpp_epc100_correlation_dec.txt")
+
+cat("intpp vs epc100 CMCC-ESM2\nDec zone result:\n\n\n")
+
+cat("Annual result:\n")
+print(summary(mean1))
+
+cat("\n\nSummer result:\n")
+print(summary(summer1))
+
+cat("\n\nWinter result:\n")
+print(summary(winter1))
+
+sink()
+
+print("epc100 Dec zone output done!")
