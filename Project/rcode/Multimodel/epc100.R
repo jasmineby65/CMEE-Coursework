@@ -39,7 +39,7 @@ slope(mean2)
 tapply(data$Annual, data$Model, mean)
 ## Plotting
 dev.off()
-pdf("../output/Multimodel/epc100_annual_whole.pdf", width = 10, height = 10)
+png("../output/Multimodel/epc100_annual_whole.png")
 
 p = ggplot(data, aes(x = Year, y = Annual)) + 
   geom_point() +
