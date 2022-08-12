@@ -1,5 +1,5 @@
 ############################
-####### ACCESS-ESM1-5 #######
+####### EC-Earth3-CC #######
 ############################
 
 
@@ -17,7 +17,7 @@ getwd()
 #### Whole area ####
 ####################
 
-data <- as.data.frame(read.csv("../csv/ACCESS-ESM1-5_epc100_whole.csv", header = TRUE, stringsAsFactors = F))
+data <- as.data.frame(read.csv("../csv/EC-Earth3-CC_epc100_whole.csv", header = TRUE, stringsAsFactors = F))
 head(data)
 
 
@@ -57,9 +57,9 @@ slope(winter2)
 
 
 ### Result summary 
-sink("../output/ACCESS-ESM1-5/epc100_whole.txt")
+sink("../output/EC-Earth3-CC/epc100_whole.txt")
 
-cat("epc100 ACCESS-ESM1-5\nWhole region result:\n\n\n")
+cat("epc100 EC-Earth3-CC\nWhole region result:\n\n\n")
 
 cat("Annual result:\n")
 print(summary(mean1))
