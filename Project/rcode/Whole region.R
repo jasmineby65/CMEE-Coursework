@@ -131,7 +131,7 @@ data[data == "Diatom"] <- "Diatom*"
 data[data == "PAR"] <- "PAR*"
 
 data <- data %>% 
-  group_by(Variable) %>%
+  group_by(Variable, Zone) %>%
   mutate(Mean_cor = mean(Abs))
 head(data)
 
