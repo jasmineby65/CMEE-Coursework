@@ -1,3 +1,7 @@
+############################
+#### Pearson vs Kendall ####
+############################
+
 rm(list = ls())
 
 require(lsmeans)
@@ -6,63 +10,83 @@ require(interactions)
 require(jtools)
 require(ggplot2)
 library(tidyverse)
-#library(ggpubr)
 library(rstatix)
+library(lme4)
+require(gridExtra)
+require(grid)
+require(gridtext)
+require(smatr)
+require(png)
 
 setwd("~/../../../media/jasmine/Album/Project/rcode")
 getwd()
 
+##### Whole ######
 
 data <- as.data.frame(read.csv("../csv/Correlation.csv", header = TRUE, stringsAsFactors = F))
 head(data)
-duplicated(data)
-data <- data[!duplicated(data),]
+unique(data$Type)
+
+# Export #
+export <- data[data$Type == "Correlation" | data$Type == "Kendall",]
+export <- na.omit(export)
+export
+
+correlation_test1 <- lmer(Correlation ~ Type + (1|Model/Variable), data = export)
+summary(correlation_test1)
+
+correlation_test2 <- lmer(Correlation ~ 1 + (1|Model/Variable), data = export)
+summary(correlation_test2)
+
+anova(correlation_test1, correlation_test2)
+
+# Sea ice #
+ice <- data[data$Type == "Correlation_ice" | data$Type == "Correlation_ice_k",]
+ice <- na.omit(ice)
+ice
+
+correlation_test1 <- lmer(Correlation ~ Type + (1|Model/Variable), data = ice)
+summary(correlation_test1)
+
+correlation_test2 <- lmer(Correlation ~ 1 + (1|Model/Variable), data = ice)
+summary(correlation_test2)
+
+anova(correlation_test1, correlation_test2)
+
+# NPP #
+correlation_test1 <- lmer(Correlation ~ Type + (1|Model/Variable), data = data)
+summary(correlation_test1)
+
+correlation_test2 <- lmer(Correlation ~ 1 + (1|Model/Variable), data = data)
+summary(correlation_test2)
+
+anova(correlation_test1, correlation_test2)
+
+
+
+##### Zone ######
+
+data <- as.data.frame(read.csv("../csv/Correlation_zone.csv", header = TRUE, stringsAsFactors = F))
 head(data)
 
-correlation_test <- lm(data$value ~ data$variable)
-summary(correlation_test)
+correlation_test1 <- lmer(Correlation ~ Type + (1|Model/Variable) +(1|Zone), data = data)
+summary(correlation_test1)
 
-data %>% 
-  group_by(Variable) %>%
-  get_summary_stats(difference, type = "common") %>%
-  write_csv("../output/Multimodel/Whole_variable_correlation_zonal.csv")
+correlation_test2 <- lmer(Correlation ~ 1 + (1|Model/Variable) +(1|Zone), data = data)
+summary(correlation_test2)
 
-plot <- as.data.frame(read.csv("../output/Multimodel/Whole_variable_correlation_zonal.csv", header = TRUE, stringsAsFactors = F))
-head(plot)
-
-ggplot() + 
-  geom_point(data = data, aes(x = Variable, y = difference)) +
-  geom_point(data = plot, aes(x = Variable, y = mean), color = "red") +
-  geom_errorbar(data = plot, aes(x = Variable, y = mean, ymin=mean-se, ymax=mean+se), width=.1, color = "red")
-
-ggplot(plot, aes(x=Variable, y=, colour=supp)) + 
-  geom_errorbar(aes(ymin=len-se, ymax=len+se), width=.1) +
-  geom_line() +
-  geom_point()
-
-res.kruskal <- data %>% kruskal_test(difference ~ Variable)
-res.kruskal
-
-pwc <- data %>% 
-  dunn_test(difference ~ Variable, p.adjust.method = "bonferroni") 
-print(pwc, n=36)
-
-pwc <- data %>% 
-  dunn_test(Abs ~ Variable, p.adjust.method = "bonferroni") 
-print(pwc, n=36)
+anova(correlation_test1, correlation_test2)
 
 
+##### Season #####
 
-png(filename="../output/Multimodel/Whole_variable_correlation_zonal_ci.png")
-ggplot() + 
-  geom_point(data = data, aes(x = Variable, y = difference)) +
-  geom_point(data = plot, aes(x = Variable, y = mean), color = "red") +
-  geom_errorbar(data = plot, aes(x = Variable, y = mean, ymin=mean-ci, ymax=mean+ci), width=.1, color = "red")
-dev.off()
+data <- as.data.frame(read.csv("../csv/Correlation_season.csv", header = TRUE, stringsAsFactors = F))
+head(data)
 
-png(filename="../output/Multimodel/Whole_variable_correlation_zonal_se.png")
-ggplot() + 
-  geom_point(data = data, aes(x = Variable, y = difference)) +
-  geom_point(data = plot, aes(x = Variable, y = mean), color = "red") +
-  geom_errorbar(data = plot, aes(x = Variable, y = mean, ymin=mean-se, ymax=mean+se), width=.1, color = "red")
-dev.off()
+correlation_test1 <- lmer(Correlation ~ Type + (1|Model/Variable) +(1|Season), data = data)
+summary(correlation_test1)
+
+correlation_test2 <- lmer(Correlation ~ 1 + (1|Model/Variable) +(1|Season), data = data)
+summary(correlation_test2)
+
+anova(correlation_test1, correlation_test2)

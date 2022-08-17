@@ -1,6 +1,6 @@
-##################
-##### Season #####
-##################
+###################################
+##### Correlation with export #####
+###################################
 
 rm(list = ls())
 
@@ -16,77 +16,56 @@ require(gridExtra)
 require(grid)
 require(gridtext)
 require(smatr)
+require(png)
 
 setwd("~/../../../media/jasmine/Album/Project/rcode")
 getwd()
 
 
-
 #############################
-#### Variable comparison ####
+##### Zonal correlation #####
 #############################
 
-data <- as.data.frame(read.csv("../csv/Season.csv", header = TRUE, stringsAsFactors = F))
+data <- as.data.frame(read.csv("../csv/Season_final.csv", header = TRUE, stringsAsFactors = F))
+data <- data[data$Variable !="Export", ]
 head(data)
 
-data["Abs"] = abs(data$Correlation)
-head(data)
-
-## Correlation ##
-data %>% 
-  group_by(Variable, Season) %>%
-  get_summary_stats(Abs, type = "common")
-
-res.kruskal_correlation <- data %>% 
-  group_by(Variable) %>%
-  kruskal_test(Abs ~ Season)
-
-res.kruskal_correlation
-
-write_csv(res.kruskal_correlation, "../csv/Season_correlation_kruskal.csv")
-
-## Percentage ##
-data %>% 
-  group_by(Variable, Season) %>%
-  get_summary_stats(Percentage, type = "common")
-
-res.kruskal_per <- data %>% 
-  group_by(Variable) %>%
-  kruskal_test(Percentage ~ Season)
-
-res.kruskal_per
-write_csv(res.kruskal_per, "../csv/Season_percentage_kruskal.csv")
-
+data$Kendall <- abs(data$Kendall)
 
 ### Plotting ###
 
-data[data == "MLD"] <- "MLD*'"
-data[data == "NPP"] <- "NPP'"
-data[data == "PAR"] <- "PAR*'"
-data[data == "SST"] <- "SST*"
+data[data == "Iron"] <- "Iron*"
+data[data == "MLD"] <- "MLD***'"
+data[data == "NPP"] <- "NPP*'"
+data[data == "PAR"] <- "PAR***'''"
+data[data == "Sea ice fraction"] <- "Sea ice fraction**"
+data[data == "SST"] <- "SST***"
+
 
 data <- data %>% 
   group_by(Variable, Season) %>%
-  mutate(Mean_cor = mean(Abs, na.rm = TRUE))
-print(data, n = 74)
+  mutate(Mean_cor = mean(Kendall))
+head(data)
 
 data <- data %>%
   mutate(Season = factor(Season, levels = c("Summer", "Winter"))) %>%
-  mutate(Variable = factor(Variable, levels = c("NPP'", "Diatom", "PAR*'", "Iron", "Nitrate", "SST*", "Sea ice cover", "MLD*'")))
+  mutate(Variable = factor(Variable, levels = c("NPP*'", "Diatom", "PAR***'''", "Iron*", "Nitrate", "SST***", "Sea ice fraction**", "MLD***'")))
 head(data)
+
+
 
 
 png(filename="../output/Multimodel/Season.png", res=600, width=10000, height=4000)
 
-Season <- ggplot(data=data, aes(x = Season, y=Percentage, fill = Mean_cor)) +
+Zone <- ggplot(data=data, aes(x = Season, y=Percentage, fill = Mean_cor)) +
   scale_fill_viridis_c(limits=c(0, 1), direction = -1) +
   geom_boxplot(lwd=0.5) +
   theme_classic() +
-  ggtitle("Seasonal percentage change by 2100") +
+  ggtitle("Percentage change by 2100 in summer and winter") +
   labs(fill='Correlation')  +
   theme(plot.title = element_text(size = 18, face = "bold", margin=margin(0,0,15,0)),
         plot.title.position = "plot",
-        strip.text.x = element_text(size = 15, hjust = 0.5, face = "bold", color = "#333333"), 
+        strip.text.x = element_text(size = 13, hjust = 0.5, face = "bold", color = "#333333"), 
         axis.title = element_blank(),
         axis.text = element_text(size = 15),
         panel.border = element_rect(size = 0.5, fill = NA),
@@ -99,7 +78,9 @@ Season <- ggplot(data=data, aes(x = Season, y=Percentage, fill = Mean_cor)) +
         legend.spacing.y = unit(0.02, units = 'npc'),
         legend.box.margin=margin(0,10,0,0)) +
   facet_wrap(. ~ Variable, scales="free", nrow = 1)
-Season
+Zone
 
 dev.off()
+
+
 

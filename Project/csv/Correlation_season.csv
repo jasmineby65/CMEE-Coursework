@@ -1,0 +1,505 @@
+,Variable,Model,Season,Type,Correlation
+0,Iron,ACCESS-ESM1-5,Summer,Correlation,0.066764354869853
+1,Iron,ACCESS-ESM1-5,Winter,Correlation,0.057344930899992
+2,NPP,ACCESS-ESM1-5,Summer,Correlation,0.913848337641285
+3,NPP,ACCESS-ESM1-5,Winter,Correlation,0.48574109798576
+4,MLD,ACCESS-ESM1-5,Summer,Correlation,-0.145343506542198
+5,MLD,ACCESS-ESM1-5,Winter,Correlation,-0.015152311281837
+6,Nitrate,ACCESS-ESM1-5,Summer,Correlation,-0.1254914150652
+7,Nitrate,ACCESS-ESM1-5,Winter,Correlation,-0.16574475194612
+8,PAR,ACCESS-ESM1-5,Summer,Correlation,0.13158968380619
+9,PAR,ACCESS-ESM1-5,Winter,Correlation,0.046131822459032
+10,Sea ice fraction,ACCESS-ESM1-5,Summer,Correlation,0.210444783333553
+11,Sea ice fraction,ACCESS-ESM1-5,Winter,Correlation,0.141303844291068
+12,SST,ACCESS-ESM1-5,Summer,Correlation,-0.138718372006307
+13,SST,ACCESS-ESM1-5,Winter,Correlation,-0.103842283596243
+14,Iron,CMCC-ESM2,Summer,Correlation,-0.360676235010932
+15,Iron,CMCC-ESM2,Winter,Correlation,0.767070833191951
+16,NPP,CMCC-ESM2,Summer,Correlation,0.166741333841898
+17,NPP,CMCC-ESM2,Winter,Correlation,-0.018098265210004
+18,Diatom,CMCC-ESM2,Summer,Correlation,0.146190308183885
+19,Diatom,CMCC-ESM2,Winter,Correlation,0.005822102512769
+20,MLD,CMCC-ESM2,Summer,Correlation,0.709687525747994
+21,MLD,CMCC-ESM2,Winter,Correlation,-0.126063203756098
+22,Nitrate,CMCC-ESM2,Summer,Correlation,0.165539185288583
+23,Nitrate,CMCC-ESM2,Winter,Correlation,0.002938241637552
+24,PAR,CMCC-ESM2,Summer,Correlation,0.403987961236606
+25,PAR,CMCC-ESM2,Winter,Correlation,-0.091896426651104
+26,Sea ice fraction,CMCC-ESM2,Summer,Correlation,-0.067179372618193
+27,Sea ice fraction,CMCC-ESM2,Winter,Correlation,0.366309052496862
+28,SST,CMCC-ESM2,Summer,Correlation,0.426725403214053
+29,SST,CMCC-ESM2,Winter,Correlation,-0.419752710827233
+30,NPP,EC-Earth3-CC,Summer,Correlation,0.706168974640629
+31,NPP,EC-Earth3-CC,Winter,Correlation,-0.180380242791295
+32,Diatom,EC-Earth3-CC,Summer,Correlation,0.876605676450876
+33,Diatom,EC-Earth3-CC,Winter,Correlation,-0.177414285932368
+34,MLD,EC-Earth3-CC,Summer,Correlation,0.21923933647912
+35,MLD,EC-Earth3-CC,Winter,Correlation,-0.076068118342
+36,Nitrate,EC-Earth3-CC,Summer,Correlation,-0.135341248146931
+37,Nitrate,EC-Earth3-CC,Winter,Correlation,-0.026323870780282
+38,PAR,EC-Earth3-CC,Summer,Correlation,0.681330170159304
+39,PAR,EC-Earth3-CC,Winter,Correlation,-0.259261396047938
+40,SST,EC-Earth3-CC,Summer,Correlation,0.580970654237206
+41,SST,EC-Earth3-CC,Winter,Correlation,0.059887837726721
+42,Iron,IPSL-CM6A-LR,Summer,Correlation,0.281968886270537
+43,Iron,IPSL-CM6A-LR,Winter,Correlation,-0.067013759541254
+44,NPP,IPSL-CM6A-LR,Summer,Correlation,0.967048715610076
+45,NPP,IPSL-CM6A-LR,Winter,Correlation,-0.111675837577168
+46,Diatom,IPSL-CM6A-LR,Summer,Correlation,0.968830774121077
+47,Diatom,IPSL-CM6A-LR,Winter,Correlation,-0.120367187687601
+48,MLD,IPSL-CM6A-LR,Summer,Correlation,-0.639551386770257
+49,MLD,IPSL-CM6A-LR,Winter,Correlation,-0.441337238400589
+50,Nitrate,IPSL-CM6A-LR,Summer,Correlation,-0.62163121293182
+51,Nitrate,IPSL-CM6A-LR,Winter,Correlation,-0.55570668577789
+52,PAR,IPSL-CM6A-LR,Summer,Correlation,0.850575705783847
+53,PAR,IPSL-CM6A-LR,Winter,Correlation,-0.171380288724555
+54,Sea ice fraction,IPSL-CM6A-LR,Summer,Correlation,0.389970000668551
+55,Sea ice fraction,IPSL-CM6A-LR,Winter,Correlation,0.536636557954436
+56,SST,IPSL-CM6A-LR,Summer,Correlation,-0.035869931493644
+57,SST,IPSL-CM6A-LR,Winter,Correlation,-0.453747948054235
+58,Iron,MPI-ESM1-2-HR,Summer,Correlation,-0.67406643436327
+59,Iron,MPI-ESM1-2-HR,Winter,Correlation,0.027877460479897
+60,NPP,MPI-ESM1-2-HR,Summer,Correlation,0.681631429856707
+61,NPP,MPI-ESM1-2-HR,Winter,Correlation,0.256939681302065
+62,MLD,MPI-ESM1-2-HR,Summer,Correlation,0.611169631018737
+63,MLD,MPI-ESM1-2-HR,Winter,Correlation,0.183053076186425
+64,Nitrate,MPI-ESM1-2-HR,Summer,Correlation,-0.686264245562598
+65,Nitrate,MPI-ESM1-2-HR,Winter,Correlation,0.006825738073791
+66,PAR,MPI-ESM1-2-HR,Summer,Correlation,0.727921558550167
+67,PAR,MPI-ESM1-2-HR,Winter,Correlation,0.13995965552537
+68,SST,MPI-ESM1-2-HR,Summer,Correlation,0.594887204007057
+69,SST,MPI-ESM1-2-HR,Winter,Correlation,-0.095135077761001
+70,Sea ice fraction,MPI-ESM1-2-HR,Summer,Correlation,-0.0229350018204104
+71,Sea ice fraction,MPI-ESM1-2-HR,Winter,Correlation,-0.0069003458256519
+72,Sea ice fraction,EC-Earth3-CC,Summer,Correlation,-0.0041780988376584
+73,Sea ice fraction,EC-Earth3-CC,Winter,Correlation,-0.0749768892971894
+74,Export,EC-Earth3-CC,Summer,Correlation,
+75,Export,EC-Earth3-CC,Winter,Correlation,
+76,Export,MPI-ESM1-2-HR,Summer,Correlation,
+77,Export,MPI-ESM1-2-HR,Winter,Correlation,
+78,Export,ACCESS-ESM1-5,Summer,Correlation,
+79,Export,ACCESS-ESM1-5,Winter,Correlation,
+80,Export,CMCC-ESM2,Summer,Correlation,
+81,Export,CMCC-ESM2,Winter,Correlation,
+82,Export,IPSL-CM6A-LR,Summer,Correlation,
+83,Export,IPSL-CM6A-LR,Winter,Correlation,
+84,Iron,ACCESS-ESM1-5,Summer,Kendall,0.000544001498014
+85,Iron,ACCESS-ESM1-5,Winter,Kendall,0.10627725030806
+86,NPP,ACCESS-ESM1-5,Summer,Kendall,0.851530038372022
+87,NPP,ACCESS-ESM1-5,Winter,Kendall,0.397760275634467
+88,MLD,ACCESS-ESM1-5,Summer,Kendall,-0.334398194752519
+89,MLD,ACCESS-ESM1-5,Winter,Kendall,-0.353101914688221
+90,Nitrate,ACCESS-ESM1-5,Summer,Kendall,-0.415281662968078
+91,Nitrate,ACCESS-ESM1-5,Winter,Kendall,-0.411459148971162
+92,PAR,ACCESS-ESM1-5,Summer,Kendall,0.626445624895499
+93,PAR,ACCESS-ESM1-5,Winter,Kendall,-0.094935451609088
+94,Sea ice fraction,ACCESS-ESM1-5,Summer,Kendall,0.412235688628048
+95,Sea ice fraction,ACCESS-ESM1-5,Winter,Kendall,0.455725379469864
+96,SST,ACCESS-ESM1-5,Summer,Kendall,0.280058565614117
+97,SST,ACCESS-ESM1-5,Winter,Kendall,-0.435681674079523
+98,Iron,CMCC-ESM2,Summer,Kendall,-0.268821549207042
+99,Iron,CMCC-ESM2,Winter,Kendall,0.559551157544239
+100,NPP,CMCC-ESM2,Summer,Kendall,0.048216838333275
+101,NPP,CMCC-ESM2,Winter,Kendall,-0.11632411811147
+102,Diatom,CMCC-ESM2,Summer,Kendall,0.032011544697457
+103,Diatom,CMCC-ESM2,Winter,Kendall,-0.072820680255565
+104,MLD,CMCC-ESM2,Summer,Kendall,0.504644162692115
+105,MLD,CMCC-ESM2,Winter,Kendall,-0.121605140118426
+106,Nitrate,CMCC-ESM2,Summer,Kendall,0.047099163806927
+107,Nitrate,CMCC-ESM2,Winter,Kendall,-0.029699012539886
+108,PAR,CMCC-ESM2,Summer,Kendall,0.398952264026228
+109,PAR,CMCC-ESM2,Winter,Kendall,-0.036831836866105
+110,Sea ice fraction,CMCC-ESM2,Summer,Kendall,0.166437621026402
+111,Sea ice fraction,CMCC-ESM2,Winter,Kendall,0.265253081474602
+112,SST,CMCC-ESM2,Summer,Kendall,0.05297060695629
+113,SST,CMCC-ESM2,Winter,Kendall,-0.296488633130025
+114,NPP,EC-Earth3-CC,Summer,Kendall,0.500016429724932
+115,NPP,EC-Earth3-CC,Winter,Kendall,-0.154314479995783
+116,Diatom,EC-Earth3-CC,Summer,Kendall,0.697897979100877
+117,Diatom,EC-Earth3-CC,Winter,Kendall,-0.14898234968342
+118,MLD,EC-Earth3-CC,Summer,Kendall,0.141953507985873
+119,MLD,EC-Earth3-CC,Winter,Kendall,0.019360377116953
+120,Nitrate,EC-Earth3-CC,Summer,Kendall,-0.073237552600791
+121,Nitrate,EC-Earth3-CC,Winter,Kendall,-0.071574220219089
+122,PAR,EC-Earth3-CC,Summer,Kendall,0.400691896791206
+123,PAR,EC-Earth3-CC,Winter,Kendall,-0.223362795024805
+124,SST,EC-Earth3-CC,Summer,Kendall,0.321756310212375
+125,SST,EC-Earth3-CC,Winter,Kendall,-0.030819941751486
+126,Iron,IPSL-CM6A-LR,Summer,Kendall,0.341329221386625
+127,Iron,IPSL-CM6A-LR,Winter,Kendall,-0.073960811040739
+128,NPP,IPSL-CM6A-LR,Summer,Kendall,0.704856711065896
+129,NPP,IPSL-CM6A-LR,Winter,Kendall,-0.101491468632465
+130,Diatom,IPSL-CM6A-LR,Summer,Kendall,0.8083509082531
+131,Diatom,IPSL-CM6A-LR,Winter,Kendall,-0.098747460263305
+132,MLD,IPSL-CM6A-LR,Summer,Kendall,-0.588326090653161
+133,MLD,IPSL-CM6A-LR,Winter,Kendall,-0.326881438737938
+134,Nitrate,IPSL-CM6A-LR,Summer,Kendall,-0.569696325971318
+135,Nitrate,IPSL-CM6A-LR,Winter,Kendall,-0.405926428959687
+136,PAR,IPSL-CM6A-LR,Summer,Kendall,0.452802567342431
+137,PAR,IPSL-CM6A-LR,Winter,Kendall,-0.129060397359821
+138,Sea ice fraction,IPSL-CM6A-LR,Summer,Kendall,0.410568084546058
+139,Sea ice fraction,IPSL-CM6A-LR,Winter,Kendall,0.429702946766782
+140,SST,IPSL-CM6A-LR,Summer,Kendall,0.006557283812969
+141,SST,IPSL-CM6A-LR,Winter,Kendall,-0.437987938757605
+142,Iron,MPI-ESM1-2-HR,Summer,Kendall,-0.472374812195451
+143,Iron,MPI-ESM1-2-HR,Winter,Kendall,-0.012003397378533
+144,NPP,MPI-ESM1-2-HR,Summer,Kendall,0.442904269832637
+145,NPP,MPI-ESM1-2-HR,Winter,Kendall,0.247720139081416
+146,MLD,MPI-ESM1-2-HR,Summer,Kendall,0.391200527644067
+147,MLD,MPI-ESM1-2-HR,Winter,Kendall,0.064926689397754
+148,Nitrate,MPI-ESM1-2-HR,Summer,Kendall,-0.471779847200152
+149,Nitrate,MPI-ESM1-2-HR,Winter,Kendall,-0.038572222693772
+150,PAR,MPI-ESM1-2-HR,Summer,Kendall,0.540845438409806
+151,PAR,MPI-ESM1-2-HR,Winter,Kendall,0.162725066376051
+152,SST,MPI-ESM1-2-HR,Summer,Kendall,0.362945114645698
+153,SST,MPI-ESM1-2-HR,Winter,Kendall,-0.02455916346946
+154,Sea ice fraction,MPI-ESM1-2-HR,Summer,Kendall,0.0839247504308892
+155,Sea ice fraction,MPI-ESM1-2-HR,Winter,Kendall,0.0922491098685016
+156,Sea ice fraction,EC-Earth3-CC,Summer,Kendall,0.2579434458642076
+157,Sea ice fraction,EC-Earth3-CC,Winter,Kendall,-0.0860248129327721
+158,Export,EC-Earth3-CC,Summer,Kendall,
+159,Export,EC-Earth3-CC,Winter,Kendall,
+160,Export,MPI-ESM1-2-HR,Summer,Kendall,
+161,Export,MPI-ESM1-2-HR,Winter,Kendall,
+162,Export,ACCESS-ESM1-5,Summer,Kendall,
+163,Export,ACCESS-ESM1-5,Winter,Kendall,
+164,Export,CMCC-ESM2,Summer,Kendall,
+165,Export,CMCC-ESM2,Winter,Kendall,
+166,Export,IPSL-CM6A-LR,Summer,Kendall,
+167,Export,IPSL-CM6A-LR,Winter,Kendall,
+168,Iron,ACCESS-ESM1-5,Summer,Correlation_ice,0.3094307893104233
+169,Iron,ACCESS-ESM1-5,Winter,Correlation_ice,0.2861782234051455
+170,NPP,ACCESS-ESM1-5,Summer,Correlation_ice,0.3404564641800159
+171,NPP,ACCESS-ESM1-5,Winter,Correlation_ice,0.3565684932682677
+172,MLD,ACCESS-ESM1-5,Summer,Correlation_ice,-0.6315203432278893
+173,MLD,ACCESS-ESM1-5,Winter,Correlation_ice,-0.1897321958470239
+174,Nitrate,ACCESS-ESM1-5,Summer,Correlation_ice,-0.4232687281015737
+175,Nitrate,ACCESS-ESM1-5,Winter,Correlation_ice,-0.4726422243066003
+176,PAR,ACCESS-ESM1-5,Summer,Correlation_ice,0.5320823407332231
+177,PAR,ACCESS-ESM1-5,Winter,Correlation_ice,-0.0731595069127058
+178,Sea ice fraction,ACCESS-ESM1-5,Summer,Correlation_ice,
+179,Sea ice fraction,ACCESS-ESM1-5,Winter,Correlation_ice,
+180,SST,ACCESS-ESM1-5,Summer,Correlation_ice,-0.2551723711561348
+181,SST,ACCESS-ESM1-5,Winter,Correlation_ice,-0.9036806642436896
+182,Iron,CMCC-ESM2,Summer,Correlation_ice,-0.1442520591309426
+183,Iron,CMCC-ESM2,Winter,Correlation_ice,0.1071675037345754
+184,NPP,CMCC-ESM2,Summer,Correlation_ice,0.2698109939273448
+185,NPP,CMCC-ESM2,Winter,Correlation_ice,-0.0104971058542114
+186,Diatom,CMCC-ESM2,Summer,Correlation_ice,0.3203059744893546
+187,Diatom,CMCC-ESM2,Winter,Correlation_ice,0.0055737522040616
+188,MLD,CMCC-ESM2,Summer,Correlation_ice,-0.2159583352635286
+189,MLD,CMCC-ESM2,Winter,Correlation_ice,-0.4433807784790033
+190,Nitrate,CMCC-ESM2,Summer,Correlation_ice,-0.4129878790446664
+191,Nitrate,CMCC-ESM2,Winter,Correlation_ice,-0.2767385772104627
+192,PAR,CMCC-ESM2,Summer,Correlation_ice,0.0918937722366868
+193,PAR,CMCC-ESM2,Winter,Correlation_ice,-0.1697694762085944
+194,Sea ice fraction,CMCC-ESM2,Summer,Correlation_ice,
+195,Sea ice fraction,CMCC-ESM2,Winter,Correlation_ice,
+196,SST,CMCC-ESM2,Summer,Correlation_ice,-0.5747493557766321
+197,SST,CMCC-ESM2,Winter,Correlation_ice,-0.9154510899454418
+198,NPP,EC-Earth3-CC,Summer,Correlation_ice,-0.0377079795345313
+199,NPP,EC-Earth3-CC,Winter,Correlation_ice,0.005145266061375
+200,Diatom,EC-Earth3-CC,Summer,Correlation_ice,0.0004889725844417
+201,Diatom,EC-Earth3-CC,Winter,Correlation_ice,-0.0279236169653893
+202,MLD,EC-Earth3-CC,Summer,Correlation_ice,-0.0356628835071434
+203,MLD,EC-Earth3-CC,Winter,Correlation_ice,-0.0901535759417807
+204,Nitrate,EC-Earth3-CC,Summer,Correlation_ice,-0.0270183845547684
+205,Nitrate,EC-Earth3-CC,Winter,Correlation_ice,-0.4526461455206893
+206,PAR,EC-Earth3-CC,Summer,Correlation_ice,-0.0111840759359016
+207,PAR,EC-Earth3-CC,Winter,Correlation_ice,0.0562164588698655
+208,SST,EC-Earth3-CC,Summer,Correlation_ice,0.0026065946000228
+209,SST,EC-Earth3-CC,Winter,Correlation_ice,-0.6891070415940327
+210,Iron,IPSL-CM6A-LR,Summer,Correlation_ice,0.5504031544205867
+211,Iron,IPSL-CM6A-LR,Winter,Correlation_ice,0.2440215865727455
+212,NPP,IPSL-CM6A-LR,Summer,Correlation_ice,0.3885389404543453
+213,NPP,IPSL-CM6A-LR,Winter,Correlation_ice,-0.2789768417526753
+214,Diatom,IPSL-CM6A-LR,Summer,Correlation_ice,0.4585692261853658
+215,Diatom,IPSL-CM6A-LR,Winter,Correlation_ice,-0.2788138133628371
+216,MLD,IPSL-CM6A-LR,Summer,Correlation_ice,-0.5129747171452955
+217,MLD,IPSL-CM6A-LR,Winter,Correlation_ice,-0.5326788824859523
+218,Nitrate,IPSL-CM6A-LR,Summer,Correlation_ice,-0.4212557870931488
+219,Nitrate,IPSL-CM6A-LR,Winter,Correlation_ice,-0.6539655217010142
+220,PAR,IPSL-CM6A-LR,Summer,Correlation_ice,0.3776291652160106
+221,PAR,IPSL-CM6A-LR,Winter,Correlation_ice,-0.3006723823346806
+222,Sea ice fraction,IPSL-CM6A-LR,Summer,Correlation_ice,
+223,Sea ice fraction,IPSL-CM6A-LR,Winter,Correlation_ice,
+224,SST,IPSL-CM6A-LR,Summer,Correlation_ice,-0.5010159210953605
+225,SST,IPSL-CM6A-LR,Winter,Correlation_ice,-0.9079892656946108
+226,Iron,MPI-ESM1-2-HR,Summer,Correlation_ice,-0.3474637392008225
+227,Iron,MPI-ESM1-2-HR,Winter,Correlation_ice,-0.000216667390515
+228,NPP,MPI-ESM1-2-HR,Summer,Correlation_ice,0.255449282235707
+229,NPP,MPI-ESM1-2-HR,Winter,Correlation_ice,-0.0085219503547181
+230,MLD,MPI-ESM1-2-HR,Summer,Correlation_ice,-0.189815397703109
+231,MLD,MPI-ESM1-2-HR,Winter,Correlation_ice,-0.0147761636360698
+232,Nitrate,MPI-ESM1-2-HR,Summer,Correlation_ice,-0.3453167312053407
+233,Nitrate,MPI-ESM1-2-HR,Winter,Correlation_ice,-0.0027234228081274
+234,PAR,MPI-ESM1-2-HR,Summer,Correlation_ice,0.2219547510259315
+235,PAR,MPI-ESM1-2-HR,Winter,Correlation_ice,-0.0087412556610216
+236,SST,MPI-ESM1-2-HR,Summer,Correlation_ice,-0.2396471619906393
+237,SST,MPI-ESM1-2-HR,Winter,Correlation_ice,-0.0263885672849799
+238,Sea ice fraction,MPI-ESM1-2-HR,Summer,Correlation_ice,
+239,Sea ice fraction,MPI-ESM1-2-HR,Winter,Correlation_ice,
+240,Sea ice fraction,EC-Earth3-CC,Summer,Correlation_ice,
+241,Sea ice fraction,EC-Earth3-CC,Winter,Correlation_ice,
+242,Export,EC-Earth3-CC,Summer,Correlation_ice,-0.0041780988376584
+243,Export,EC-Earth3-CC,Winter,Correlation_ice,-0.0749768892971894
+244,Export,MPI-ESM1-2-HR,Summer,Correlation_ice,-0.0229350018204104
+245,Export,MPI-ESM1-2-HR,Winter,Correlation_ice,-0.0069003458256519
+246,Export,ACCESS-ESM1-5,Summer,Correlation_ice,0.2104447531461101
+247,Export,ACCESS-ESM1-5,Winter,Correlation_ice,0.1413038442910677
+248,Export,CMCC-ESM2,Summer,Correlation_ice,-0.0671793858265792
+249,Export,CMCC-ESM2,Winter,Correlation_ice,0.3663090524968624
+250,Export,IPSL-CM6A-LR,Summer,Correlation_ice,0.3899700565241988
+251,Export,IPSL-CM6A-LR,Winter,Correlation_ice,0.5366364997756714
+252,Iron,ACCESS-ESM1-5,Summer,Correlation_ice_k,0.2053640962268579
+253,Iron,ACCESS-ESM1-5,Winter,Correlation_ice_k,0.2600493641552131
+254,NPP,ACCESS-ESM1-5,Summer,Correlation_ice_k,0.418735241864315
+255,NPP,ACCESS-ESM1-5,Winter,Correlation_ice_k,0.4020196590976019
+256,MLD,ACCESS-ESM1-5,Summer,Correlation_ice_k,-0.4226719378208591
+257,MLD,ACCESS-ESM1-5,Winter,Correlation_ice_k,-0.2029345240955078
+258,Nitrate,ACCESS-ESM1-5,Summer,Correlation_ice_k,-0.2962212801087406
+259,Nitrate,ACCESS-ESM1-5,Winter,Correlation_ice_k,-0.2971363260475614
+260,PAR,ACCESS-ESM1-5,Summer,Correlation_ice_k,0.4604041613912424
+261,PAR,ACCESS-ESM1-5,Winter,Correlation_ice_k,0.0560376047727671
+262,Sea ice fraction,ACCESS-ESM1-5,Summer,Correlation_ice_k,
+263,Sea ice fraction,ACCESS-ESM1-5,Winter,Correlation_ice_k,
+264,SST,ACCESS-ESM1-5,Summer,Correlation_ice_k,-0.0943808750373706
+265,SST,ACCESS-ESM1-5,Winter,Correlation_ice_k,-0.8006470399449022
+266,Iron,CMCC-ESM2,Summer,Correlation_ice_k,-0.2067655285657395
+267,Iron,CMCC-ESM2,Winter,Correlation_ice_k,0.0864668912021927
+268,NPP,CMCC-ESM2,Summer,Correlation_ice_k,0.4092122457333734
+269,NPP,CMCC-ESM2,Winter,Correlation_ice_k,-0.1123383407285661
+270,Diatom,CMCC-ESM2,Summer,Correlation_ice_k,0.4236546243257693
+271,Diatom,CMCC-ESM2,Winter,Correlation_ice_k,-0.0808670688527028
+272,MLD,CMCC-ESM2,Summer,Correlation_ice_k,-0.0419895474958375
+273,MLD,CMCC-ESM2,Winter,Correlation_ice_k,-0.3080350319587654
+274,Nitrate,CMCC-ESM2,Summer,Correlation_ice_k,-0.3525557001431046
+275,Nitrate,CMCC-ESM2,Winter,Correlation_ice_k,-0.180850145334131
+276,PAR,CMCC-ESM2,Summer,Correlation_ice_k,0.3152497969589348
+277,PAR,CMCC-ESM2,Winter,Correlation_ice_k,0.0285239586574655
+278,Sea ice fraction,CMCC-ESM2,Summer,Correlation_ice_k,
+279,Sea ice fraction,CMCC-ESM2,Winter,Correlation_ice_k,
+280,SST,CMCC-ESM2,Summer,Correlation_ice_k,-0.4631455529399934
+281,SST,CMCC-ESM2,Winter,Correlation_ice_k,-0.8291783797532984
+282,NPP,EC-Earth3-CC,Summer,Correlation_ice_k,0.0997756751766323
+283,NPP,EC-Earth3-CC,Winter,Correlation_ice_k,0.2839021642516321
+284,Diatom,EC-Earth3-CC,Summer,Correlation_ice_k,0.1986582231353243
+285,Diatom,EC-Earth3-CC,Winter,Correlation_ice_k,0.2406957498009612
+286,MLD,EC-Earth3-CC,Summer,Correlation_ice_k,-0.007515973364474
+287,MLD,EC-Earth3-CC,Winter,Correlation_ice_k,-0.0665159458113532
+288,Nitrate,EC-Earth3-CC,Summer,Correlation_ice_k,-0.3365107123534461
+289,Nitrate,EC-Earth3-CC,Winter,Correlation_ice_k,-0.3092938881655402
+290,PAR,EC-Earth3-CC,Summer,Correlation_ice_k,0.5254974747124636
+291,PAR,EC-Earth3-CC,Winter,Correlation_ice_k,0.3437499296215153
+292,SST,EC-Earth3-CC,Summer,Correlation_ice_k,0.2205476184448832
+293,SST,EC-Earth3-CC,Winter,Correlation_ice_k,-0.561826253210822
+294,Iron,IPSL-CM6A-LR,Summer,Correlation_ice_k,0.2680216133789969
+295,Iron,IPSL-CM6A-LR,Winter,Correlation_ice_k,0.099529451991481
+296,NPP,IPSL-CM6A-LR,Summer,Correlation_ice_k,0.3132060397208446
+297,NPP,IPSL-CM6A-LR,Winter,Correlation_ice_k,-0.1309365723469205
+298,Diatom,IPSL-CM6A-LR,Summer,Correlation_ice_k,0.4333993622914911
+299,Diatom,IPSL-CM6A-LR,Winter,Correlation_ice_k,-0.1309653724203848
+300,MLD,IPSL-CM6A-LR,Summer,Correlation_ice_k,-0.332082033887131
+301,MLD,IPSL-CM6A-LR,Winter,Correlation_ice_k,-0.3674372488053045
+302,Nitrate,IPSL-CM6A-LR,Summer,Correlation_ice_k,-0.3093779675004294
+303,Nitrate,IPSL-CM6A-LR,Winter,Correlation_ice_k,-0.4592353101746272
+304,PAR,IPSL-CM6A-LR,Summer,Correlation_ice_k,0.4636629064048322
+305,PAR,IPSL-CM6A-LR,Winter,Correlation_ice_k,-0.1283201463819434
+306,Sea ice fraction,IPSL-CM6A-LR,Summer,Correlation_ice_k,
+307,Sea ice fraction,IPSL-CM6A-LR,Winter,Correlation_ice_k,
+308,SST,IPSL-CM6A-LR,Summer,Correlation_ice_k,-0.2646001224050934
+309,SST,IPSL-CM6A-LR,Winter,Correlation_ice_k,-0.8299349144213201
+310,Iron,MPI-ESM1-2-HR,Summer,Correlation_ice_k,-0.3413552895925305
+311,Iron,MPI-ESM1-2-HR,Winter,Correlation_ice_k,-0.2477172028021447
+312,NPP,MPI-ESM1-2-HR,Summer,Correlation_ice_k,0.2743464004568882
+313,NPP,MPI-ESM1-2-HR,Winter,Correlation_ice_k,0.2959487869876209
+314,MLD,MPI-ESM1-2-HR,Summer,Correlation_ice_k,0.0205126410464686
+315,MLD,MPI-ESM1-2-HR,Winter,Correlation_ice_k,-0.378812849071698
+316,Nitrate,MPI-ESM1-2-HR,Summer,Correlation_ice_k,-0.3364518755866272
+317,Nitrate,MPI-ESM1-2-HR,Winter,Correlation_ice_k,-0.2564479428975513
+318,PAR,MPI-ESM1-2-HR,Summer,Correlation_ice_k,0.2992973352031148
+319,PAR,MPI-ESM1-2-HR,Winter,Correlation_ice_k,0.2311862212772854
+320,SST,MPI-ESM1-2-HR,Summer,Correlation_ice_k,-0.1066535177772216
+321,SST,MPI-ESM1-2-HR,Winter,Correlation_ice_k,-0.7718985964377864
+322,Sea ice fraction,MPI-ESM1-2-HR,Summer,Correlation_ice_k,
+323,Sea ice fraction,MPI-ESM1-2-HR,Winter,Correlation_ice_k,
+324,Sea ice fraction,EC-Earth3-CC,Summer,Correlation_ice_k,
+325,Sea ice fraction,EC-Earth3-CC,Winter,Correlation_ice_k,
+326,Export,EC-Earth3-CC,Summer,Correlation_ice_k,0.2579434458642076
+327,Export,EC-Earth3-CC,Winter,Correlation_ice_k,-0.0860248129327721
+328,Export,MPI-ESM1-2-HR,Summer,Correlation_ice_k,0.0839247504308892
+329,Export,MPI-ESM1-2-HR,Winter,Correlation_ice_k,0.0922491098685016
+330,Export,ACCESS-ESM1-5,Summer,Correlation_ice_k,0.4122353348930528
+331,Export,ACCESS-ESM1-5,Winter,Correlation_ice_k,0.455725202520023
+332,Export,CMCC-ESM2,Summer,Correlation_ice_k,0.1664370249522208
+333,Export,CMCC-ESM2,Winter,Correlation_ice_k,0.2652537054661366
+334,Export,IPSL-CM6A-LR,Summer,Correlation_ice_k,0.4105684481460368
+335,Export,IPSL-CM6A-LR,Winter,Correlation_ice_k,0.4297029467667815
+336,Iron,ACCESS-ESM1-5,Summer,Correlation_npp,0.1139729353139065
+337,Iron,ACCESS-ESM1-5,Winter,Correlation_npp,0.0219838754967079
+338,NPP,ACCESS-ESM1-5,Summer,Correlation_npp,
+339,NPP,ACCESS-ESM1-5,Winter,Correlation_npp,
+340,MLD,ACCESS-ESM1-5,Summer,Correlation_npp,-0.3015429811255873
+341,MLD,ACCESS-ESM1-5,Winter,Correlation_npp,-0.1809137744774272
+342,Nitrate,ACCESS-ESM1-5,Summer,Correlation_npp,-0.2297795198338753
+343,Nitrate,ACCESS-ESM1-5,Winter,Correlation_npp,-0.3425894252956477
+344,PAR,ACCESS-ESM1-5,Summer,Correlation_npp,0.2940746678762055
+345,PAR,ACCESS-ESM1-5,Winter,Correlation_npp,0.4080741326084704
+346,Sea ice fraction,ACCESS-ESM1-5,Summer,Correlation_npp,0.3404564641800159
+347,Sea ice fraction,ACCESS-ESM1-5,Winter,Correlation_npp,0.3565684932682677
+348,SST,ACCESS-ESM1-5,Summer,Correlation_npp,-0.1649318591783465
+349,SST,ACCESS-ESM1-5,Winter,Correlation_npp,-0.3741138370555172
+350,Iron,CMCC-ESM2,Summer,Correlation_npp,-0.0330810905664903
+351,Iron,CMCC-ESM2,Winter,Correlation_npp,-0.0210586184502498
+352,NPP,CMCC-ESM2,Summer,Correlation_npp,
+353,NPP,CMCC-ESM2,Winter,Correlation_npp,
+354,Diatom,CMCC-ESM2,Summer,Correlation_npp,0.9935210351138908
+355,Diatom,CMCC-ESM2,Winter,Correlation_npp,-0.0012754964227308
+356,MLD,CMCC-ESM2,Summer,Correlation_npp,-0.0657858299206971
+357,MLD,CMCC-ESM2,Winter,Correlation_npp,0.0119564950756382
+358,Nitrate,CMCC-ESM2,Summer,Correlation_npp,-0.1900188985070548
+359,Nitrate,CMCC-ESM2,Winter,Correlation_npp,-0.0026802293914432
+360,PAR,CMCC-ESM2,Summer,Correlation_npp,0.8930173593412419
+361,PAR,CMCC-ESM2,Winter,Correlation_npp,0.0025098837884419
+362,Sea ice fraction,CMCC-ESM2,Summer,Correlation_npp,0.2698109939273448
+363,Sea ice fraction,CMCC-ESM2,Winter,Correlation_npp,-0.0104971058542114
+364,SST,CMCC-ESM2,Summer,Correlation_npp,-0.0880882419970806
+365,SST,CMCC-ESM2,Winter,Correlation_npp,0.0172439077654272
+366,NPP,EC-Earth3-CC,Summer,Correlation_npp,
+367,NPP,EC-Earth3-CC,Winter,Correlation_npp,
+368,Diatom,EC-Earth3-CC,Summer,Correlation_npp,0.7951758053429785
+369,Diatom,EC-Earth3-CC,Winter,Correlation_npp,0.9905606482463168
+370,MLD,EC-Earth3-CC,Summer,Correlation_npp,-0.0612630829527109
+371,MLD,EC-Earth3-CC,Winter,Correlation_npp,0.3100048392784109
+372,Nitrate,EC-Earth3-CC,Summer,Correlation_npp,-0.2082702921819175
+373,Nitrate,EC-Earth3-CC,Winter,Correlation_npp,0.2223203687878569
+374,PAR,EC-Earth3-CC,Summer,Correlation_npp,0.7195843441449271
+375,PAR,EC-Earth3-CC,Winter,Correlation_npp,0.9681938064652368
+376,SST,EC-Earth3-CC,Summer,Correlation_npp,0.4583105888867603
+377,SST,EC-Earth3-CC,Winter,Correlation_npp,0.0427420971255503
+378,Iron,IPSL-CM6A-LR,Summer,Correlation_npp,0.3142385686443245
+379,Iron,IPSL-CM6A-LR,Winter,Correlation_npp,-0.4101339289398343
+380,NPP,IPSL-CM6A-LR,Summer,Correlation_npp,
+381,NPP,IPSL-CM6A-LR,Winter,Correlation_npp,
+382,Diatom,IPSL-CM6A-LR,Summer,Correlation_npp,0.9746209061721876
+383,Diatom,IPSL-CM6A-LR,Winter,Correlation_npp,0.9926587534035816
+384,MLD,IPSL-CM6A-LR,Summer,Correlation_npp,-0.6912981024499534
+385,MLD,IPSL-CM6A-LR,Winter,Correlation_npp,0.0522891601516438
+386,Nitrate,IPSL-CM6A-LR,Summer,Correlation_npp,-0.6533526866560349
+387,Nitrate,IPSL-CM6A-LR,Winter,Correlation_npp,0.1466371450046621
+388,PAR,IPSL-CM6A-LR,Summer,Correlation_npp,0.8645256985547451
+389,PAR,IPSL-CM6A-LR,Winter,Correlation_npp,0.9639754246472172
+390,Sea ice fraction,IPSL-CM6A-LR,Summer,Correlation_npp,0.3885389404543453
+391,Sea ice fraction,IPSL-CM6A-LR,Winter,Correlation_npp,-0.2789768417526753
+392,SST,IPSL-CM6A-LR,Summer,Correlation_npp,-0.0171817142177994
+393,SST,IPSL-CM6A-LR,Winter,Correlation_npp,0.1015050699854681
+394,Iron,MPI-ESM1-2-HR,Summer,Correlation_npp,-0.6670303389538125
+395,Iron,MPI-ESM1-2-HR,Winter,Correlation_npp,-0.0898392168511951
+396,NPP,MPI-ESM1-2-HR,Summer,Correlation_npp,
+397,NPP,MPI-ESM1-2-HR,Winter,Correlation_npp,
+398,MLD,MPI-ESM1-2-HR,Summer,Correlation_npp,0.3566161371046319
+399,MLD,MPI-ESM1-2-HR,Winter,Correlation_npp,-0.1382861799503977
+400,Nitrate,MPI-ESM1-2-HR,Summer,Correlation_npp,-0.7059087253970847
+401,Nitrate,MPI-ESM1-2-HR,Winter,Correlation_npp,-0.141188519227308
+402,PAR,MPI-ESM1-2-HR,Summer,Correlation_npp,0.7601307410332637
+403,PAR,MPI-ESM1-2-HR,Winter,Correlation_npp,0.9400184969450214
+404,SST,MPI-ESM1-2-HR,Summer,Correlation_npp,0.5257482375223919
+405,SST,MPI-ESM1-2-HR,Winter,Correlation_npp,-0.2990700888883301
+406,Sea ice fraction,MPI-ESM1-2-HR,Summer,Correlation_npp,0.255449282235707
+407,Sea ice fraction,MPI-ESM1-2-HR,Winter,Correlation_npp,-0.0085219503547181
+408,Sea ice fraction,EC-Earth3-CC,Summer,Correlation_npp,-0.0377079795345313
+409,Sea ice fraction,EC-Earth3-CC,Winter,Correlation_npp,0.005145266061375
+410,Export,EC-Earth3-CC,Summer,Correlation_npp,0.706169065037449
+411,Export,EC-Earth3-CC,Winter,Correlation_npp,-0.1803803075347936
+412,Export,MPI-ESM1-2-HR,Summer,Correlation_npp,0.6816314298567071
+413,Export,MPI-ESM1-2-HR,Winter,Correlation_npp,0.2569396813020648
+414,Export,ACCESS-ESM1-5,Summer,Correlation_npp,0.913848269604894
+415,Export,ACCESS-ESM1-5,Winter,Correlation_npp,0.4857410979857598
+416,Export,CMCC-ESM2,Summer,Correlation_npp,0.1667413338418981
+417,Export,CMCC-ESM2,Winter,Correlation_npp,-0.0180982709540789
+418,Export,IPSL-CM6A-LR,Summer,Correlation_npp,0.9670487740046392
+419,Export,IPSL-CM6A-LR,Winter,Correlation_npp,-0.1116758296251465
+420,Iron,ACCESS-ESM1-5,Summer,Correlation_npp_k,0.062245879780124
+421,Iron,ACCESS-ESM1-5,Winter,Correlation_npp_k,0.0194332921150253
+422,NPP,ACCESS-ESM1-5,Summer,Correlation_npp_k,
+423,NPP,ACCESS-ESM1-5,Winter,Correlation_npp_k,
+424,MLD,ACCESS-ESM1-5,Summer,Correlation_npp_k,-0.3582029851790801
+425,MLD,ACCESS-ESM1-5,Winter,Correlation_npp_k,-0.3173670410239262
+426,Nitrate,ACCESS-ESM1-5,Summer,Correlation_npp_k,-0.3668098228322961
+427,Nitrate,ACCESS-ESM1-5,Winter,Correlation_npp_k,-0.3144562252799776
+428,PAR,ACCESS-ESM1-5,Summer,Correlation_npp_k,0.7138898117941289
+429,PAR,ACCESS-ESM1-5,Winter,Correlation_npp_k,0.4356127934611978
+430,Sea ice fraction,ACCESS-ESM1-5,Summer,Correlation_npp_k,0.418735241864315
+431,Sea ice fraction,ACCESS-ESM1-5,Winter,Correlation_npp_k,0.4020196590976019
+432,SST,ACCESS-ESM1-5,Summer,Correlation_npp_k,0.3094649784230909
+433,SST,ACCESS-ESM1-5,Winter,Correlation_npp_k,-0.3835194464258226
+434,Iron,CMCC-ESM2,Summer,Correlation_npp_k,0.0901263020960506
+435,Iron,CMCC-ESM2,Winter,Correlation_npp_k,-0.0987286919535256
+436,NPP,CMCC-ESM2,Summer,Correlation_npp_k,
+437,NPP,CMCC-ESM2,Winter,Correlation_npp_k,
+438,Diatom,CMCC-ESM2,Summer,Correlation_npp_k,0.9125159958023936
+439,Diatom,CMCC-ESM2,Winter,Correlation_npp_k,0.7417469749423184
+440,MLD,CMCC-ESM2,Summer,Correlation_npp_k,-0.13580018178315
+441,MLD,CMCC-ESM2,Winter,Correlation_npp_k,-0.0033226281940673
+442,Nitrate,CMCC-ESM2,Summer,Correlation_npp_k,-0.3329606117763635
+443,Nitrate,CMCC-ESM2,Winter,Correlation_npp_k,-0.0868734235422103
+444,PAR,CMCC-ESM2,Summer,Correlation_npp_k,0.1876747748896954
+445,PAR,CMCC-ESM2,Winter,Correlation_npp_k,-0.150297254813983
+446,Sea ice fraction,CMCC-ESM2,Summer,Correlation_npp_k,0.4092122457333734
+447,Sea ice fraction,CMCC-ESM2,Winter,Correlation_npp_k,-0.1123383407285661
+448,SST,CMCC-ESM2,Summer,Correlation_npp_k,-0.2186728172629471
+449,SST,CMCC-ESM2,Winter,Correlation_npp_k,0.10176065529751
+450,NPP,EC-Earth3-CC,Summer,Correlation_npp_k,
+451,NPP,EC-Earth3-CC,Winter,Correlation_npp_k,
+452,Diatom,EC-Earth3-CC,Summer,Correlation_npp_k,0.5637440538005197
+453,Diatom,EC-Earth3-CC,Winter,Correlation_npp_k,0.8410375324532493
+454,MLD,EC-Earth3-CC,Summer,Correlation_npp_k,0.1153966475936746
+455,MLD,EC-Earth3-CC,Winter,Correlation_npp_k,0.1417972999681095
+456,Nitrate,EC-Earth3-CC,Summer,Correlation_npp_k,0.1269683828938643
+457,Nitrate,EC-Earth3-CC,Winter,Correlation_npp_k,-0.0036086630833749
+458,PAR,EC-Earth3-CC,Summer,Correlation_npp_k,0.2546070828516338
+459,PAR,EC-Earth3-CC,Winter,Correlation_npp_k,0.8009433699245376
+460,SST,EC-Earth3-CC,Summer,Correlation_npp_k,0.2832848170191775
+461,SST,EC-Earth3-CC,Winter,Correlation_npp_k,0.0143416049964368
+462,Iron,IPSL-CM6A-LR,Summer,Correlation_npp_k,0.3800615913505076
+463,Iron,IPSL-CM6A-LR,Winter,Correlation_npp_k,-0.2131317656634384
+464,NPP,IPSL-CM6A-LR,Summer,Correlation_npp_k,
+465,NPP,IPSL-CM6A-LR,Winter,Correlation_npp_k,
+466,Diatom,IPSL-CM6A-LR,Summer,Correlation_npp_k,0.7373194259786712
+467,Diatom,IPSL-CM6A-LR,Winter,Correlation_npp_k,0.877822706607648
+468,MLD,IPSL-CM6A-LR,Summer,Correlation_npp_k,-0.6318804596908872
+469,MLD,IPSL-CM6A-LR,Winter,Correlation_npp_k,0.1890700719029404
+470,Nitrate,IPSL-CM6A-LR,Summer,Correlation_npp_k,-0.5513984921842541
+471,Nitrate,IPSL-CM6A-LR,Winter,Correlation_npp_k,0.172168197229373
+472,PAR,IPSL-CM6A-LR,Summer,Correlation_npp_k,0.317634676125726
+473,PAR,IPSL-CM6A-LR,Winter,Correlation_npp_k,0.8492147228055008
+474,Sea ice fraction,IPSL-CM6A-LR,Summer,Correlation_npp_k,0.3132060397208446
+475,Sea ice fraction,IPSL-CM6A-LR,Winter,Correlation_npp_k,-0.1309365723469205
+476,SST,IPSL-CM6A-LR,Summer,Correlation_npp_k,0.0149494582041742
+477,SST,IPSL-CM6A-LR,Winter,Correlation_npp_k,0.1992468451681092
+478,Iron,MPI-ESM1-2-HR,Summer,Correlation_npp_k,-0.4980049698319496
+479,Iron,MPI-ESM1-2-HR,Winter,Correlation_npp_k,-0.0971712134915123
+480,NPP,MPI-ESM1-2-HR,Summer,Correlation_npp_k,
+481,NPP,MPI-ESM1-2-HR,Winter,Correlation_npp_k,
+482,MLD,MPI-ESM1-2-HR,Summer,Correlation_npp_k,0.1880481642875197
+483,MLD,MPI-ESM1-2-HR,Winter,Correlation_npp_k,-0.2457774068135756
+484,Nitrate,MPI-ESM1-2-HR,Summer,Correlation_npp_k,-0.5191435652214696
+485,Nitrate,MPI-ESM1-2-HR,Winter,Correlation_npp_k,-0.1543145686966995
+486,PAR,MPI-ESM1-2-HR,Summer,Correlation_npp_k,0.5265396248013458
+487,PAR,MPI-ESM1-2-HR,Winter,Correlation_npp_k,0.747690422717951
+488,SST,MPI-ESM1-2-HR,Summer,Correlation_npp_k,0.3633613200113836
+489,SST,MPI-ESM1-2-HR,Winter,Correlation_npp_k,-0.249273331323075
+490,Sea ice fraction,MPI-ESM1-2-HR,Summer,Correlation_npp_k,0.2743464004568882
+491,Sea ice fraction,MPI-ESM1-2-HR,Winter,Correlation_npp_k,0.2959487869876209
+492,Sea ice fraction,EC-Earth3-CC,Summer,Correlation_npp_k,0.0997756751766323
+493,Sea ice fraction,EC-Earth3-CC,Winter,Correlation_npp_k,0.2839021642516321
+494,Export,EC-Earth3-CC,Summer,Correlation_npp_k,0.5000167720108682
+495,Export,EC-Earth3-CC,Winter,Correlation_npp_k,-0.1543148222817191
+496,Export,MPI-ESM1-2-HR,Summer,Correlation_npp_k,0.4429040986196891
+497,Export,MPI-ESM1-2-HR,Winter,Correlation_npp_k,0.2477192830166749
+498,Export,ACCESS-ESM1-5,Summer,Correlation_npp_k,0.8515303916770874
+499,Export,ACCESS-ESM1-5,Winter,Correlation_npp_k,0.3977600989819426
+500,Export,CMCC-ESM2,Summer,Correlation_npp_k,0.0482170357325204
+501,Export,CMCC-ESM2,Winter,Correlation_npp_k,-0.1163239207122243
+502,Export,IPSL-CM6A-LR,Summer,Correlation_npp_k,0.7048563478028109
+503,Export,IPSL-CM6A-LR,Winter,Correlation_npp_k,-0.1014911971571101

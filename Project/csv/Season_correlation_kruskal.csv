@@ -1,0 +1,9 @@
+Variable,.y.,n,statistic,df,p,method
+Diatom,Abs,6,2.333333333333332,1,0.127,Kruskal-Wallis
+Iron,Abs,8,0.75,1,0.386,Kruskal-Wallis
+MLD,Abs,10,3.9381818181818176,1,0.0472,Kruskal-Wallis
+Nitrate,Abs,10,1.8436363636363637,1,0.175,Kruskal-Wallis
+NPP,Abs,10,3.9381818181818176,1,0.0472,Kruskal-Wallis
+PAR,Abs,10,3.9381818181818176,1,0.0472,Kruskal-Wallis
+Sea ice cover,Abs,10,0.75,1,0.386,Kruskal-Wallis
+SST,Abs,10,0.8836363636363629,1,0.347,Kruskal-Wallis

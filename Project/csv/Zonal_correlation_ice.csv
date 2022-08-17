@@ -1,0 +1,9 @@
+Variable,.y.,n,statistic,df,p,method
+Diatom,Kendall,6,1.1904761904761898,1,0.275,Kruskal-Wallis
+Export,Kendall,10,0.8836363636363629,1,0.347,Kruskal-Wallis
+Iron,Kendall,8,1.3333333333333321,1,0.248,Kruskal-Wallis
+MLD,Kendall,10,0.5345454545454515,1,0.465,Kruskal-Wallis
+Nitrate,Kendall,10,0.8836363636363629,1,0.347,Kruskal-Wallis
+NPP,Kendall,10,0.010909090909095198,1,0.917,Kruskal-Wallis
+PAR,Kendall,10,0.09818181818181415,1,0.754,Kruskal-Wallis
+SST,Kendall,10,0.010909090909095198,1,0.917,Kruskal-Wallis

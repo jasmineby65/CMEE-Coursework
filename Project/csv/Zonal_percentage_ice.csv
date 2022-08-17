@@ -1,0 +1,9 @@
+Variable,.y.,n,statistic,df,p,method
+Diatom,Percentage,6,3.8571428571428577,1,0.0495,Kruskal-Wallis
+Export,Percentage,10,6.81818181818182,1,0.00902,Kruskal-Wallis
+Iron,Percentage,8,0.08333333333333215,1,0.773,Kruskal-Wallis
+MLD,Percentage,10,0.8836363636363629,1,0.347,Kruskal-Wallis
+Nitrate,Percentage,10,0.5345454545454515,1,0.465,Kruskal-Wallis
+NPP,Percentage,10,6.81818181818182,1,0.00902,Kruskal-Wallis
+PAR,Percentage,10,5.770909090909086,1,0.0163,Kruskal-Wallis
+SST,Percentage,10,2.4545454545454533,1,0.117,Kruskal-Wallis

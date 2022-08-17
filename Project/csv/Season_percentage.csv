@@ -1,0 +1,9 @@
+Variable,.y.,n,statistic,df,p,method
+Diatom,Percentage,6,1.1904761904761898,1,0.275,Kruskal-Wallis
+Iron,Percentage,8,0.33333333333333215,1,0.564,Kruskal-Wallis
+MLD,Percentage,10,6.81818181818182,1,0.00902,Kruskal-Wallis
+Nitrate,Percentage,10,0.09818181818181415,1,0.754,Kruskal-Wallis
+NPP,Percentage,10,2.4545454545454533,1,0.117,Kruskal-Wallis
+PAR,Percentage,10,6.81818181818182,1,0.00902,Kruskal-Wallis
+Sea ice fraction,Percentage,10,3.152727272727269,1,0.0758,Kruskal-Wallis
+SST,Percentage,10,6.81818181818182,1,0.00902,Kruskal-Wallis
