@@ -10,7 +10,7 @@ require(segmented)
 require(interactions)
 require(jtools)
 
-setwd("~/../../../media/jasmine/Album/Project/rcode")
+#setwd("~/../../../media/jasmine/Album/Project/rcode")
 getwd()
 
 ####################

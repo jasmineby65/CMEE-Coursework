@@ -1,0 +1,71 @@
+siconc ACCESS-ESM1-5
+
+Overall:
+Mean change = -61.87301254272461% -15.78325366973877
+Median change = -60.33794021606445% -15.88371467590332
+Max inc = 4.012899875640869% 1.1137104034423828
+Max dec = -100.0% -45.925048828125
+Total change in ice cover: -366639056.515628 km-2 (-43.58363408755582%)
+
+Summer:
+Mean change = -74.93727111816406% -11.06882381439209
+Median change = -83.93446350097656% -7.439392566680908
+Max inc = 37.871604919433594% 0.012483611702919006
+Max dec = -100.0% -56.01116943359375
+
+Winter:
+Mean change = -62.664794921875% -22.72824478149414
+Median change = -76.30783081054688% -17.016033172607422
+Max inc = 4.018652439117432% 3.5744400024414062
+Max dec = -100.0% -74.96427917480469
+
+
+Increasing zone:
+Mean change = -62.21784591674805% -15.860316276550293
+Median change = -60.780517578125% -15.960092544555664
+Max inc = 0.7833027243614197% 0.7213516235351562
+Max dec = -100.0% -45.925048828125
+
+
+Decreasing zone:
+Mean change = -32.68543243408203% -6.625889301300049
+Median change = -28.092615127563477% -5.387364864349365
+Max inc = 4.012899875640869% 1.1137104034423828
+Max dec = -98.9418716430664% -19.889049530029297
+
+
+
+Increasing zone:
+Percentage correlation with epc100: 0.19717887646548035 p = 0.00000
+Absolute correlation with epc100: -0.7102788179382697 p = 0.00000
+
+Decreasing zone:
+Percentage correlation with epc100: -0.4134828734496977 p = 0.00009
+Absolute correlation with epc100: -0.005180144134443139 p = 0.96270
+
+
+Summer:
+Percentage correlation with epc100: 0.21044478333355285 p = 0.00000
+Absolute correlation with epc100: -0.572253252980144 p = 0.00000
+
+Winter:
+Percentage correlation with epc100: 0.1413038442910677 p = 0.00000
+Absolute correlation with epc100: 0.04012270019566661 p = 0.00564
+
+
+Increasing zone:
+Percentage correlation with epc100: 0.19717887646548035 p = 0.00000
+Absolute correlation with epc100: -0.7102788179382697 p = 0.00000
+
+Decreasing zone:
+Percentage correlation with epc100: -0.4134828734496977 p = 0.00009
+Absolute correlation with epc100: -0.005180144134443139 p = 0.96270
+
+
+Summer:
+Percentage correlation with epc100: 0.21044478333355285 p = 0.00000
+Absolute correlation with epc100: -0.572253252980144 p = 0.00000
+
+Winter:
+Percentage correlation with epc100: 0.1413038442910677 p = 0.00000
+Absolute correlation with epc100: 0.04012270019566661 p = 0.00564

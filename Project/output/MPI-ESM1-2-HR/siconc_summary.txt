@@ -1,0 +1,57 @@
+siconc MPI-ESM1-2-HR
+
+Overall:
+Mean change = -56.79739761352539% -9.89002799987793
+Median change = -53.117252349853516% -9.085479736328125
+Max inc = 254.55007934570312% 1.1793060302734375
+Max dec = -100.0% -28.98755645751953
+Total change in ice cover: -235170077.5238452 km-2 (-37.585711346227995%)
+
+Summer:
+Mean change = -76.09834289550781% -6.159309387207031
+Median change = -82.71925354003906% -1.6189886331558228
+Max inc = 16.05843734741211% 1.6182479858398438
+Max dec = -100.0% -40.95845031738281
+
+Winter:
+Mean change = inf% -14.530036926269531
+Median change = -67.49993896484375% -11.576133728027344
+Max inc = inf% 1.4518585205078125
+Max dec = -100.0% -54.97085189819336
+
+
+Increasing zone:
+Mean change = -56.97491455078125% -11.267273902893066
+Median change = -52.975852966308594% -11.12551212310791
+Max inc = -2.8239922523498535% 0.0
+Max dec = -100.0% -28.98755645751953
+
+
+Decreasing zone:
+Mean change = -59.598785400390625% -6.029961585998535
+Median change = -69.68830108642578% -6.052403450012207
+Max inc = 254.55007934570312% 1.1793060302734375
+Max dec = -100.0% -20.860389709472656
+
+
+
+Increasing zone:
+Percentage correlation with epc100: 0.2437865724676776 p = 0.00000
+Absolute correlation with epc100: -0.6297844562805993 p = 0.00000
+
+Decreasing zone:
+Percentage correlation with epc100: 0.10431539910270166 p = 0.00000
+Absolute correlation with epc100: -0.16032379102360422 p = 0.00000
+
+
+Summer:
+Percentage correlation with epc100: -0.0229349683925797 p = 0.17103
+Absolute correlation with epc100: -0.602716662826286 p = 0.00000
+
+Winter:
+Percentage correlation with epc100: nan p = nan
+Absolute correlation with epc100: -0.3373619903151671 p = 0.00000
+
+Winter:
+Percentage correlation with epc100: -0.00690033188756482 p = 0.63550
+Absolute correlation with epc100: -0.3373619903151671 p = 0.00000

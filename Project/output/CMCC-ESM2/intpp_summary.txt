@@ -1,0 +1,88 @@
+intpp CMCC-ESM2
+
+Overall:
+Mean change = 19.55724334716797% 1.763018531164562e-08
+Median change = 16.154680252075195% 1.664717785843095e-08
+Max inc = 3331.927001953125% 1.4363880040946242e-07
+Max dec = -34.37553787231445% -1.1356553386576707e-07
+
+Summer:
+Mean change = 1.7067519426345825% -5.859731033730498e-10
+Median change = -2.2791531085968018% -5.629630095427274e-09
+Max inc = 2789.81201171875% 4.5910582002761657e-07
+Max dec = -52.04404067993164% -3.843556442006957e-07
+
+Winter:
+Mean change = -239.07383728027344% 4.928487618016675e-10
+Median change = -11.186935424804688% 1.946872107971842e-10
+Max inc = 113560.65625% 5.492086785352512e-09
+Max dec = -333544.8125% -4.276341947218043e-09
+
+
+Increasing zone:
+Mean change = 23.48166275024414% 2.1115907244961818e-08
+Median change = 19.662830352783203% 2.0056329930184802e-08
+Max inc = 3331.927001953125% 1.4363880040946242e-07
+Max dec = -28.403287887573242% -1.1356553386576707e-07
+
+
+Decreasing zone:
+Mean change = 3.822483777999878% 4.318965185490242e-09
+Median change = 1.7214782238006592 2.1545076833717758e-09%
+Max inc = 42.145057678222656% 5.623809329335927e-08
+Max dec = -34.37553787231445% -9.879262563572411e-08
+
+
+
+Increasing zone:
+Percentage correlation with epc100: 0.4163049075548552
+Absolute correlation with epc100: 0.6806709425085671
+
+Decreasing zone:
+Percentage correlation with epc100: 0.5434132484871611
+Absolute correlation with epc100: 0.4793736525595825
+
+
+Increasing zone:
+Percentage correlation with epc100: 0.41630491614341736 p = 0.00000
+Absolute correlation with epc100: 0.6806709425085671 p = 0.00000
+
+Decreasing zone:
+Percentage correlation with epc100: 0.5434132484871611 p = 0.00000
+Absolute correlation with epc100: 0.4793736525595825 p = 0.00000
+
+
+Summer:
+Percentage correlation with epc100: 0.16674133384189815 p = 0.00000
+Absolute correlation with epc100: -0.15083098456873334 p = 0.00000
+
+Winter:
+Percentage correlation with epc100: -0.018098265210004273 p = 0.22471
+Absolute correlation with epc100: -0.13629427858755347 p = 0.00000
+
+
+Increasing zone:
+Percentage correlation with epc100: 0.4163049075548552 p = 0.00000
+Absolute correlation with epc100: 0.6806709425085671 p = 0.00000
+
+Decreasing zone:
+Percentage correlation with epc100: 0.5434132484871611 p = 0.00000
+Absolute correlation with epc100: 0.4793736525595825 p = 0.00000
+
+
+Summer:
+Percentage correlation with epc100: 0.16674133384189815 p = 0.00000
+Absolute correlation with epc100: -0.15083098456873334 p = 0.00000
+
+Winter:
+Percentage correlation with epc100: -0.018098265210004273 p = 0.22471
+Absolute correlation with epc100: -0.13629427858755347 p = 0.00000
+
+
+Increasing zone:
+Percentage correlation with epc100: 0.4163049075548552 p = 0.00000
+Absolute correlation with epc100: 0.6806709425085671 p = 0.00000
+
+Decreasing zone:
+Percentage correlation with epc100: 0.5434132484871611 p = 0.00000
+Absolute correlation with epc100: 0.4793736525595825 p = 0.00000

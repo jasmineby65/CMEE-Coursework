@@ -1,0 +1,61 @@
+mlotst CMCC-ESM2
+
+Overall:
+Mean change = -6.581823348999023% -8.123793601989746
+Median change = -8.443768501281738% -6.935638427734375
+Max inc = 254.46109008789062% 56.06096649169922
+Max dec = -54.99907684326172% -137.21766662597656
+
+Summer:
+Mean change = 9.115900039672852% 1.0490576028823853
+Median change = 1.0705472230911255% 0.25156211853027344
+Max inc = 494.8356628417969% 34.423526763916016
+Max dec = -41.58054733276367% -21.77447509765625
+
+Winter:
+Mean change = -6.736195087432861% -12.241098403930664
+Median change = -7.331014633178711% -8.276241302490234
+Max inc = 245.6961212158203% 72.43511962890625
+Max dec = -59.52336883544922% -324.6788330078125
+
+
+Increasing zone:
+Mean change = -5.582950592041016% -6.262997150421143
+Median change = -7.642435550689697% -5.941577911376953
+Max inc = 254.46109008789062% 56.06096649169922
+Max dec = -52.65983963012695% -132.5746307373047
+
+
+Decreasing zone:
+Mean change = -9.855015754699707% -13.60596752166748
+Median change = -9.830826759338379% -10.336372375488281
+Max inc = 24.143978118896484% 15.067581176757812
+Max dec = -54.99907684326172% -137.21766662597656
+
+
+
+Increasing zone:
+Percentage correlation with epc100: 0.0905792093354563 p = 0.00000
+Absolute correlation with epc100: 0.11896890408289638 p = 0.00000
+
+Decreasing zone:
+Percentage correlation with epc100: -0.08430532019000998 p = 0.00188
+Absolute correlation with epc100: 0.08751274411926217 p = 0.00125
+
+
+Summer:
+Percentage correlation with epc100: 0.7096875257479942 p = 0.00000
+Absolute correlation with epc100: 0.4909044108343944 p = 0.00000
+
+Winter:
+Percentage correlation with epc100: -0.12606320375609806 p = 0.00000
+Absolute correlation with epc100: 0.14314787759836112 p = 0.00000
+Mean of 2081-2100 median value: <xarray.Dataset>
+Dimensions:  ()
+Data variables:
+    mlotst   float32 77.74m
+Mean of 2081-2100 median value: <bound method Mapping.values of <xarray.Dataset>
+Dimensions:  ()
+Data variables:
+    mlotst   float32 77.74>m
+Mean of 2081-2100 median value: 77.74290466308594m

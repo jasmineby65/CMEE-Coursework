@@ -1,0 +1,68 @@
+siconc vs epc100 CMCC-ESM2
+Inc zone result:
+
+
+Annual result:
+
+Call:
+lm(formula = Annual ~ Year, data = data)
+
+Residuals:
+      Min        1Q    Median        3Q       Max 
+-0.076589 -0.022694 -0.002882  0.016609  0.076322 
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)    
+(Intercept) -4.0835789  0.3151223  -12.96   <2e-16 ***
+Year         0.0019098  0.0001531   12.47   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.03526 on 84 degrees of freedom
+Multiple R-squared:  0.6493,	Adjusted R-squared:  0.6451 
+F-statistic: 155.5 on 1 and 84 DF,  p-value: < 2.2e-16
+
+
+
+Summer result:
+
+Call:
+lm(formula = Summer ~ Year, data = data)
+
+Residuals:
+      Min        1Q    Median        3Q       Max 
+-0.068434 -0.020176 -0.003401  0.018767  0.069629 
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)    
+(Intercept) -2.4076553  0.2841624  -8.473 6.83e-13 ***
+Year         0.0008218  0.0001381   5.951 5.96e-08 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.03179 on 84 degrees of freedom
+Multiple R-squared:  0.2965,	Adjusted R-squared:  0.2882 
+F-statistic: 35.41 on 1 and 84 DF,  p-value: 5.957e-08
+
+
+
+Winter result:
+
+Call:
+lm(formula = Winter ~ Year, data = data)
+
+Residuals:
+      Min        1Q    Median        3Q       Max 
+-0.156933 -0.046338 -0.007056  0.035375  0.172945 
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)    
+(Intercept) -6.3437403  0.6106187  -10.39   <2e-16 ***
+Year         0.0031794  0.0002968   10.71   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.06832 on 84 degrees of freedom
+Multiple R-squared:  0.5774,	Adjusted R-squared:  0.5724 
+F-statistic: 114.8 on 1 and 84 DF,  p-value: < 2.2e-16
+

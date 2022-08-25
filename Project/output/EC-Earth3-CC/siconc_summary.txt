@@ -1,0 +1,53 @@
+siconc EC-Earth3-CC
+
+Overall:
+Mean change = -79.86469268798828% -14.155987739562988
+Median change = -89.41948699951172% -12.900102615356445
+Max inc = 86.60325622558594% 0.007103811949491501
+Max dec = -100.0% -52.434024810791016
+Total change in ice cover: -206862764.17156604 km-2 (-65.65220439294923%)
+
+Summer:
+Mean change = inf% -3.8623478412628174
+Median change = -100.0% -0.35183215141296387
+Max inc = inf% 0.45954564213752747
+Max dec = -100.0% -40.71013641357422
+
+Winter:
+Mean change = -82.863037109375% -22.061725616455078
+Median change = -95.51498413085938% -15.668535232543945
+Max inc = 4.090236663818359% 2.4095077514648438
+Max dec = -100.0% -81.1280517578125
+
+
+Increasing zone:
+Mean change = -78.99687957763672% -15.49775505065918
+Median change = -88.3041763305664% -14.582508087158203
+Max inc = 86.60325622558594% 0.007103811949491501
+Max dec = -100.0% -52.434024810791016
+
+
+Decreasing zone:
+Mean change = -83.48583984375% -8.362556457519531
+Median change = -96.25817108154297% -5.996111869812012
+Max inc = 86.60325622558594% 0.007103811949491501
+Max dec = -100.0% -43.57958221435547
+
+
+
+Increasing zone:
+Percentage correlation with epc100: 0.13116888483859696 p = 0.00000
+Absolute correlation with epc100: -0.6209930534997672 p = 0.00000
+
+Decreasing zone:
+Percentage correlation with epc100: 0.13198970421024733 p = 0.00000
+Absolute correlation with epc100: -0.1680887503699997 p = 0.00000
+
+
+Summer:
+Percentage correlation with epc100: nan p = nan
+Absolute correlation with epc100: -0.6249044861021092 p = 0.00000
+
+Winter:
+Percentage correlation with epc100: -0.07497687674669339 p = 0.00001
+Absolute correlation with epc100: 0.07420015565303355 p = 0.00001

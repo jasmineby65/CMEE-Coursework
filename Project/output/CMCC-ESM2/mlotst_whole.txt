@@ -1,0 +1,186 @@
+mlotst CMCC-ESM2
+Whole region result:
+
+
+Annual result:
+
+Call:
+lm(formula = Annual ~ Year, data = data)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-4.1650 -1.6606  0.0582  1.5651  4.3127 
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 318.820907  17.721403   17.99   <2e-16 ***
+Year         -0.112267   0.008612  -13.04   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 1.983 on 84 degrees of freedom
+Multiple R-squared:  0.6692,	Adjusted R-squared:  0.6653 
+F-statistic: 169.9 on 1 and 84 DF,  p-value: < 2.2e-16
+
+
+Davies test:
+
+	Davies' test for a change in the slope
+
+data:  formula = Annual ~ Year ,   method = lm 
+model = gaussian , link = identity  
+segmented variable = Year
+'best' at = 2016, n.points = 10, p-value = 0.4744
+alternative hypothesis: two.sided
+
+
+Inflection Summary
+
+	***Regression Model with Segmented Relationship(s)***
+
+Call: 
+segmented.lm(obj = mean1, seg.Z = ~Year)
+
+Estimated Break-Point(s):
+              Est. St.Err
+psi1.Year 2019.25  4.161
+
+Meaningful coefficients of the linear terms:
+             Estimate Std. Error t value Pr(>|t|)
+(Intercept) 1151.3572  1269.9304   0.907    0.367
+Year          -0.5247     0.6296  -0.833    0.407
+U1.Year        0.4161     0.6297   0.661       NA
+
+Residual standard error: 1.991 on 82 degrees of freedom
+Multiple R-Squared: 0.6743,  Adjusted R-squared: 0.6624 
+
+Boot restarting based on 9 samples. Last fit:
+Convergence *not* attained in 1 iterations (rel. change 0.034893)
+$Year
+           Est.   St.Err.   t value CI(95%).l CI(95%).u
+slope1 -0.52466 0.6296100  -0.83331  -1.77720  0.727840
+slope2 -0.10861 0.0094617 -11.47900  -0.12743 -0.089789
+
+
+
+Summer result:
+
+Call:
+lm(formula = Summer ~ Year, data = data)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-8.0849 -1.6232  0.0405  1.7885  9.2008 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)
+(Intercept) -5.91977   25.78107  -0.230    0.819
+Year         0.02034    0.01253   1.623    0.108
+
+Residual standard error: 2.884 on 84 degrees of freedom
+Multiple R-squared:  0.03041,	Adjusted R-squared:  0.01887 
+F-statistic: 2.635 on 1 and 84 DF,  p-value: 0.1083
+
+
+
+Davies test:
+
+	Davies' test for a change in the slope
+
+data:  formula = Summer ~ Year ,   method = lm 
+model = gaussian , link = identity  
+segmented variable = Year
+'best' at = 2089.8, n.points = 10, p-value = 1
+alternative hypothesis: two.sided
+
+
+Inflection Summary
+
+	***Regression Model with Segmented Relationship(s)***
+
+Call: 
+segmented.lm(obj = summer1, seg.Z = ~Year)
+
+Estimated Break-Point(s):
+           Est. St.Err
+psi1.Year 2086 16.481
+
+Meaningful coefficients of the linear terms:
+            Estimate Std. Error t value Pr(>|t|)
+(Intercept) 10.69912   33.78259   0.317    0.752
+Year         0.01220    0.01647   0.740    0.461
+U1.Year      0.10767    0.19332   0.557       NA
+
+Residual standard error: 2.905 on 82 degrees of freedom
+Multiple R-Squared: 0.0398,  Adjusted R-squared: 0.004671 
+
+Boot restarting based on 8 samples. Last fit:
+Convergence attained in 1 iterations (rel. change -1.4698e-07)
+$Year
+           Est.  St.Err. t value CI(95%).l CI(95%).u
+slope1 0.012197 0.016474 0.74033 -0.020576  0.044969
+slope2 0.119870 0.192610 0.62231 -0.263300  0.503030
+
+
+
+Winter result:
+
+Call:
+lm(formula = Winter ~ Year, data = data)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-4.6976 -1.6673 -0.2636  1.8034  6.2928 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 488.78933   21.17413   23.08   <2e-16 ***
+Year         -0.17906    0.01029  -17.40   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 2.369 on 84 degrees of freedom
+Multiple R-squared:  0.7828,	Adjusted R-squared:  0.7802 
+F-statistic: 302.8 on 1 and 84 DF,  p-value: < 2.2e-16
+
+
+Davies test:
+
+	Davies' test for a change in the slope
+
+data:  formula = Winter ~ Year ,   method = lm 
+model = gaussian , link = identity  
+segmented variable = Year
+'best' at = 2016, n.points = 10, p-value = 0.05553
+alternative hypothesis: two.sided
+
+
+Inflection Summary
+
+	***Regression Model with Segmented Relationship(s)***
+
+Call: 
+segmented.lm(obj = winter1, seg.Z = ~Year)
+
+Estimated Break-Point(s):
+           Est. St.Err
+psi1.Year 2041 13.775
+
+Meaningful coefficients of the linear terms:
+             Estimate Std. Error t value Pr(>|t|)   
+(Intercept) 360.08432  125.24660   2.875  0.00515 **
+Year         -0.11568    0.06177  -1.873  0.06467 . 
+U1.Year      -0.08191    0.06423  -1.275       NA   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 2.362 on 82 degrees of freedom
+Multiple R-Squared: 0.7892,  Adjusted R-squared: 0.7815 
+
+Boot restarting based on 10 samples. Last fit:
+Convergence attained in 2 iterations (rel. change 1.7581e-07)
+$Year
+           Est.  St.Err.  t value CI(95%).l  CI(95%).u
+slope1 -0.11568 0.061773  -1.8727  -0.23857  0.0072024
+slope2 -0.19759 0.017611 -11.2200  -0.23263 -0.1625600
+
